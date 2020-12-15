@@ -1,4 +1,4 @@
-# volto-theme-ims
+# volto-ims-theme
 
 ## Develop
 
@@ -12,15 +12,15 @@ Before starting make sure your development environment is properly set. See [Vol
 
 1.  Create new volto app
 
-        $ yo @plone/volto my-volto-project --addon @eeacms/volto-theme-ims
+        $ yo @plone/volto my-volto-project --addon @eeacms/volto-ims-theme
         $ cd my-volto-project
 
 1.  Add the following to `mrs.developer.json`:
 
         {
-            "volto-theme-ims": {
-                "url": "https://github.com/eea/volto-theme-ims.git",
-                "package": "@eeacms/volto-theme-ims",
+            "volto-ims-theme": {
+                "url": "https://github.com/eea/volto-ims-theme.git",
+                "package": "@eeacms/volto-ims-theme",
                 "branch": "develop",
                 "path": "src"
             }
@@ -49,4 +49,4 @@ Before starting make sure your development environment is properly set. See [Vol
 
 1.  Happy hacking!
 
-        $ cd src/addons/volto-theme-ims/
+        $ cd src/addons/volto-ims-theme/

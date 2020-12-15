@@ -1,11 +1,11 @@
 {
-  "name": "@eeacms/volto-theme-ims",
+  "name": "@eeacms/volto-ims-theme",
   "version": "0.1.0",
-  "description": "volto-theme-ims: Volto add-on",
+  "description": "volto-ims-theme: Volto Theme: EEA IMS",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
   "license": "MIT",
-  "homepage": "https://github.com/eea/volto-theme-ims",
+  "homepage": "https://github.com/eea/volto-ims-theme",
   "keywords": [
     "volto-addon",
     "volto",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:eea/volto-theme-ims.git"
+    "url": "git@github.com:eea/volto-ims-theme.git"
   },
   "dependencies": {
   },
