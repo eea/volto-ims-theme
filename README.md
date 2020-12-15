@@ -1,4 +1,4 @@
-# volto--ims-theme
+# volto-ims-theme
 [![Releases](https://img.shields.io/github/v/release/eea/volto-ims-theme)](https://github.com/eea/volto-ims-theme/releases)
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-ims-theme%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-ims-theme/job/master/display/redirect)
 [![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-ims-theme%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-ims-theme/job/develop/display/redirect)
