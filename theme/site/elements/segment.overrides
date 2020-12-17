@@ -1,0 +1,19 @@
+/*-------------------
+      HEADER
+--------------------*/
+
+.ui.secondary.segment {
+  background: transparent;
+  color: @lightBlue;
+}
+
+.ui.vertical.segment {
+  border: 1px solid #ececec;
+  padding: 8px 0;
+}
+
+
+.ui.segment.footer-wrapper{
+  border: none !important;
+  padding: 0 !important;
+}

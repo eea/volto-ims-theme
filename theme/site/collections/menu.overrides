@@ -1,0 +1,20 @@
+/*-------------------
+      HEADER
+--------------------*/
+
+.ui.secondary.pointing.menu .active.item {
+  border-bottom: 3px solid @green;
+  color: @black;
+  &:hover {
+    border-color: @green;
+  }
+}
+
+.ui.menu .item {
+  text-transform: none !important;
+  color: @black;
+  font-size: 15px;
+  &:hover {
+    border-color: @black;
+  }
+}

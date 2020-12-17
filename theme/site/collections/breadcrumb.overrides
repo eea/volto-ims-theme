@@ -1,0 +1,11 @@
+/*-------------------
+      HEADER
+--------------------*/
+
+.ui.breadcrumb {
+  font-size: 15px !important;
+}
+
+.ui.breadcrumb .active.section {
+  color: @black !important;
+}

@@ -1,0 +1,15 @@
+/*-------------------
+      HEADER
+--------------------*/
+
+.eea-logo {
+  display: block;
+  width: auto;
+  height: 40px;
+  min-width: 209px;
+  @media screen and (max-width: 1279px) {
+    max-width: 77%;
+    float: left;
+    margin: 10px 0;
+  }
+}

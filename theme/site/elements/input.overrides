@@ -1,0 +1,16 @@
+/*-------------------
+      HEADER
+--------------------*/
+
+.ui.transparent.input {
+  order: 1;
+}
+
+.ui.form input[type='text'] {
+  color: @darkGrey;
+  font-size: 15px;
+}
+
+.ui.form .searchbox.field {
+  border-left: none;
+}

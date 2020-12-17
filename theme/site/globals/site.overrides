@@ -1,0 +1,101 @@
+/*-------------------
+      FOOTER
+--------------------*/
+
+.first-footer,
+.portal-footer {
+  background: @blue !important;
+}
+
+.second-footer,
+.portal-colophon {
+  background: @white !important;
+}
+
+.portal-footer,
+.portal-colophon {
+  padding: 0 !important;
+}
+
+.section-header {
+  margin: 0 0 0.83em 0;
+  font-size: 1.375rem !important;
+}
+
+.portal-footer {
+  .colophon-section {
+    &:not(:first-child) {
+      border-top: 1px solid rgba(255, 255, 255, 0.23);
+    }
+  }
+  :not(.section-header) {
+    font-size: 1em;
+  }
+  .section-centered {
+    text-align: center;
+    padding: 1.125rem 0;
+  }
+  h2,
+  p,
+  div,
+  a {
+    color: @white !important;
+  }
+  h2 {
+    font-weight: bold !important;
+  }
+}
+
+.column {
+  @media screen and (min-width: 767px) {
+    width: 100%;
+  }
+}
+
+.first-footer {
+  .media-contactus {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mx-2 {
+    display: flex;
+    justify-content: center;
+  }
+  .mx-2 span {
+    text-align: left;
+    padding-left: .5em;
+  }
+}
+
+.portal-colophon {
+  .colophon-section {
+    padding: 1.125rem 0;
+  }
+  .europe-agency-text {
+    color: @lightGrey;
+    font-weight: normal;
+    font-size: 12px;
+  }
+  .eea-software-info {
+    font-size: 11px;
+    border-top: 1px solid rgba(0, 0, 0, 0.11);
+    a {
+      color: @darkBlue;
+      font-weight: bold;
+    }
+  }
+  a {
+    &:hover {
+      color: @darkBlue;
+    }
+  }
+
+  .colophon-links {
+    display: inline-block;
+    margin: 0 1em 0.75em;
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
