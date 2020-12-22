@@ -1,0 +1,31 @@
+/*-------------------
+      HEADER
+--------------------*/
+
+.ui.basic.segment {
+  &.header-wrapper {
+    padding: 0;
+  }
+  .header .logo-nav-wrapper {
+    align-items: center;
+    .navigation {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .header .tools-search-wrapper .search form {
+    @media only screen and (min-width: 991px) {
+      padding: 0;
+    }
+  }
+}
+
+.ui.basic.segment .header .tools-wrapper {
+  display: flex;
+  align-items: center;
+  .tools-search-wrapper {
+    margin-left: 0.5em;
+  }
+}

@@ -1,0 +1,8 @@
+@media only screen and (min-width: @largestWindowSize) {
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    .ui.container {
+    width: @largestContainerSize !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}

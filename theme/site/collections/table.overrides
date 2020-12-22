@@ -7,7 +7,6 @@
     background: none !important;
     border: none !important;
     border-collapse: collapse !important;
-    margin: 0;
     max-width: 100% !important;
     width: auto;
     tr td {
@@ -38,7 +37,7 @@
   .two-tables {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     @media only screen and (max-width: 603px) {
       flex-direction: column;
     }
@@ -46,6 +45,7 @@
 
   .left-table,
   .right-table {
+    margin: 0 5em;
     .table-link-title,
     .table-link-description {
       @media only screen and (max-width: 767px) {

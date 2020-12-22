@@ -6,11 +6,41 @@
   order: 1;
 }
 
+.ui.form .searchbox.field {
+  border-left: none;
+  button {
+    color: @darkGrey;
+  }
+  .ui.input input {
+    width: 4.5em;
+  }
+}
+
 .ui.form input[type='text'] {
   color: @darkGrey;
   font-size: 15px;
 }
 
-.ui.form .searchbox.field {
-  border-left: none;
+.ui.form input {
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: @darkGrey;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: @darkGrey;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: @darkGrey;
+    font-size: 15px;
+    font-weight: 400;
+  }
 }

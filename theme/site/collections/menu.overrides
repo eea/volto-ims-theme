@@ -18,3 +18,34 @@
     border-color: @black;
   }
 }
+
+.ui.secondary.pointing.menu {
+  .item > a > i {
+    font-size: 20px;
+    color: @darkGrey;
+    margin: 0;
+  }
+  .item.sign-in {
+    padding: 0;
+    align-self: center;
+    margin: 0;
+  }
+}
+
+.tools .ui.secondary.pointing.menu {
+  margin: 0;
+}
+
+.tools-change-language {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  i.globe {
+    font-size: 20px;
+    color: @darkGrey;
+  }
+  span {
+    font-size: 15px;
+    color: @darkGrey;
+  }
+}

@@ -5,13 +5,10 @@
 
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Form, Input } from 'semantic-ui-react';
+import { Form, Input, Icon } from 'semantic-ui-react';
 import { compose } from 'redux';
 import { PropTypes } from 'prop-types';
 import { defineMessages, injectIntl } from 'react-intl';
-
-import { Icon } from '@plone/volto/components';
-import zoomSVG from '@plone/volto/icons/zoom.svg';
 
 const messages = defineMessages({
   search: {
@@ -116,7 +113,7 @@ class SearchWidget extends Component {
             title={this.props.intl.formatMessage(messages.search)}
           />
           <button aria-label={this.props.intl.formatMessage(messages.search)}>
-            <Icon name={zoomSVG} size="18px" />
+            <Icon name="search" size="large" />
           </button>
         </Form.Field>
       </Form>

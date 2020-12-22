@@ -4,8 +4,10 @@
  */
 
 import React, { Component } from 'react';
-import { Segment, Header, Grid, Table, Icon } from 'semantic-ui-react';
+import { Segment, Header, Grid, Table, Icon, Image } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+
+import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
 
 /**
  * Component to display the footer.
@@ -169,65 +171,57 @@ class Footer extends Component {
                 <Header as="h2" className="section-header">
                   Follow us
                 </Header>
-                <Grid columns={2}>
-                  <Grid.Row>
-                    <Grid.Column>
-                      <a
-                        className="link-plain media"
-                        title="Follow us on Twitter"
-                        href="https://twitter.com/euenvironment"
-                      >
-                        <span className="eea-icon eea-icon-twitter-square eea-icon-4x" />
-                      </a>
-                      <a
-                        className="link-plain media"
-                        title="Follow us on Facebook"
-                        href="https://www.facebook.com/European.Environment.Agency"
-                      >
-                        <span className="eea-icon eea-icon-facebook-square eea-icon-4x" />
-                      </a>
-                      <a
-                        className="link-plain media"
-                        title="Follow us on LinkedIn"
-                        href="https://www.linkedin.com/company/european-environment-agency"
-                      >
-                        <span className="eea-icon  eea-icon-linkedin-square eea-icon-4x" />
-                      </a>
-                      <a
-                        className="link-plain media"
-                        title="Follow us on YouTube"
-                        href="https://www.youtube.com/user/EEAvideos"
-                      >
-                        <span className="eea-icon eea-icon-youtube-square eea-icon-4x" />
-                      </a>
-                      <a
-                        className="link-plain media"
-                        title="Subscribe to RSS Feed"
-                        href="/subscription/news-feeds"
-                      >
-                        <span className="eea-icon eea-icon-rss-square eea-icon-4x" />
-                      </a>
-                    </Grid.Column>
-                    <Grid.Column>
-                      <div className="media">
-                        <a
-                          className="link-plain media-link align-center"
-                          title="Subscribe by email"
-                          href="/subscription/targeted-subscription"
-                        >
-                          <span className="eea-icon eea-icon-4x eea-icon-newspaper-o" />
-                          <div className="media-body">
-                            <span>
-                              Sign up to receive our news notifications
-                            </span>
-                            <br />
-                            <span>and our quarterly e-newsletter</span>
-                          </div>
-                        </a>
-                      </div>
-                    </Grid.Column>
-                  </Grid.Row>
-                </Grid>
+                <div className="media-centered">
+                  <div className="social-media">
+                    <a
+                      className="link-plain media"
+                      title="Follow us on Twitter"
+                      href="https://twitter.com/euenvironment"
+                    >
+                      <Icon name="twitter square" />
+                    </a>
+                    <a
+                      className="link-plain media"
+                      title="Follow us on Facebook"
+                      href="https://www.facebook.com/European.Environment.Agency"
+                    >
+                      <Icon name="facebook" />
+                    </a>
+                    <a
+                      className="link-plain media"
+                      title="Follow us on LinkedIn"
+                      href="https://www.linkedin.com/company/european-environment-agency"
+                    >
+                      <Icon name="linkedin" />
+                    </a>
+                    <a
+                      className="link-plain media"
+                      title="Follow us on YouTube"
+                      href="https://www.youtube.com/user/EEAvideos"
+                    >
+                      <Icon name="youtube square" />
+                    </a>
+                    <a
+                      className="link-plain media"
+                      title="Subscribe to RSS Feed"
+                      href="/subscription/news-feeds"
+                    >
+                      <Icon name="rss square" />
+                    </a>
+                  </div>
+                  <a
+                    className="media"
+                    title="Subscribe by email"
+                    href="/subscription/targeted-subscription"
+                  >
+                    <Icon name="newspaper outline" />
+                    <div className="media-body">
+                      <span>Sign up to receive our news notifications</span>
+                      <br />
+                      <span>and our quarterly e-newsletter</span>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="colophon-section">
@@ -235,47 +229,39 @@ class Footer extends Component {
                 <Header as="h2" className="section-header">
                   <a href="/contact-us">Contact us</a>
                 </Header>
-                <Grid columns={3}>
-                  <Grid.Row className="media-contactus">
-                    <Grid.Column>
-                      <div className="mx-2">
-                        <Icon name="map marker alternate" size="big" />
-                        <span>
-                          Kongens Nytorv 6 <br /> 1050 Copenhagen K
-                        </span>
-                      </div>
-                    </Grid.Column>
-                    <Grid.Column>
-                      <div className="mx-2">
-                        <Icon name="phone" size="big" />
-                        <span>
-                          Phone number:
-                          <br />
-                          <a href="tel:+4533367100">(+45) 33 36 71 00</a>
-                        </span>
-                      </div>
-                    </Grid.Column>
-                    <Grid.Column>
-                      <div className="mx-2">
-                        <a href="https://www.eea.europa.eu/contact-us">
-                          <Icon name="comment" size="big" />
-                        </a>
-                        <span>
-                          <a
-                            href="https://www.eea.europa.eu/contact-us"
-                            className="block"
-                          >
-                            Ask your question
-                          </a>
-                          <br />
-                          <a href="https://www.eea.europa.eu/media/">
-                            Media enquiries
-                          </a>
-                        </span>
-                      </div>
-                    </Grid.Column>
-                  </Grid.Row>
-                </Grid>
+                <div className="media-centered">
+                  <div className="mx-2">
+                    <Icon name="map marker alternate" />
+                    <span>
+                      Kongens Nytorv 6 <br /> 1050 Copenhagen K
+                    </span>
+                  </div>
+                  <div className="mx-2">
+                    <Icon name="phone" flipped="horizontally" />
+                    <span>
+                      Phone number:
+                      <br />
+                      <a href="tel:+4533367100">(+45) 33 36 71 00</a>
+                    </span>
+                  </div>
+                  <div className="mx-2">
+                    <a href="https://www.eea.europa.eu/contact-us">
+                      <Icon name="comment" />
+                    </a>
+                    <span>
+                      <a
+                        href="https://www.eea.europa.eu/contact-us"
+                        className="block"
+                      >
+                        Ask your question
+                      </a>
+                      <br />
+                      <a href="https://www.eea.europa.eu/media/">
+                        Media enquiries
+                      </a>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </Segment>
@@ -291,14 +277,21 @@ class Footer extends Component {
                   title="European Union Flag"
                 />
                 <span className="europe-agency-text">
-                  <em> The EEA is an agency of the European Union</em>
+                  <Image
+                    src={EUflag}
+                    alt="European Union Flag"
+                    title="European Union Flag"
+                    height={64}
+                    className="eu-flag"
+                  />
+                  <span> The EEA is an agency of the European Union</span>
                 </span>
               </a>
             </div>
 
             <div className="colophon-section eea-software-info">
               <p className="colophon-links">
-                <span className="eea-icon eea-icon-tasks" />
+                <Icon name="database" />
                 Engineered by:&nbsp;
                 <a href="https://www.eea.europa.eu/help/contact-info">
                   EEA Web Team
@@ -342,7 +335,7 @@ class Footer extends Component {
                   href="http://creativecommons.org/licenses/by/2.5/dk/deed.en_GB"
                   title="Creative Commons Attribution License"
                 >
-                  <span className="eea-icon eea-icon-creative-commons" />
+                  <Icon name="creative commons" size="large" />
                   <span>Creative commons license</span>
                 </a>
               </p>

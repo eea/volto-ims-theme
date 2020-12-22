@@ -15,7 +15,11 @@
 @lightBlue: #086ca3;
 @darkBlue: #274357;
 @lightGrey: #999;
+@lighterGray: #ccc;
 @darkGrey: #666;
 @purple: #8e004d;
 @green: #00888A;
 @black: #333;
+
+@largestWindowSize: 1600px;
+@largestContainerSize: 1400px;

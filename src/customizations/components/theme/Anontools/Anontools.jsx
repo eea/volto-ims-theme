@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Icon } from 'semantic-ui-react';
 import { FormattedMessage } from 'react-intl';
 
 import { settings } from '~/config';
@@ -51,7 +51,7 @@ class Anontools extends Component {
     return (
       !this.props.token && (
         <Menu pointing secondary floated="right">
-          <Menu.Item>
+          <Menu.Item className="sign-in">
             <Link
               aria-label="login"
               to={`/login${
@@ -63,10 +63,11 @@ class Anontools extends Component {
                   : ''
               }`}
             >
-            <span
+            <Icon
                       title="Log in to CMS"
-                      className="eea-icon eea-icon-lg eea-icon-sign-in"
-                    >test</span>
+                      name="sign in"
+                      size="large"
+                    />
             </Link>
           </Menu.Item>
         </Menu>
