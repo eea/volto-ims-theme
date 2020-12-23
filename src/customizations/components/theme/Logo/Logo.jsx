@@ -42,7 +42,8 @@ const Logo = () => {
         src={LogoImage}
         alt={intl.formatMessage(messages.eeasite)}
         title={intl.formatMessage(messages.eeasite)}
-        height={64} className="eea-logo"
+        height={64}
+        className="eea-logo"
       />
     </Link>
   );

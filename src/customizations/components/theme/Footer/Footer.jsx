@@ -4,8 +4,7 @@
  */
 
 import React, { Component } from 'react';
-import { Segment, Header, Grid, Table, Icon, Image } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { Segment, Header, Table, Icon, Image } from 'semantic-ui-react';
 
 import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
 

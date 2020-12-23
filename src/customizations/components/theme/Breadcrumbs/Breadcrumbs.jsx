@@ -14,7 +14,6 @@ import { defineMessages, injectIntl } from 'react-intl';
 import { getBreadcrumbs } from '@plone/volto/actions';
 import { getBaseUrl } from '@plone/volto/helpers';
 
-
 const messages = defineMessages({
   home: {
     id: 'Home',
@@ -93,7 +92,10 @@ class Breadcrumbs extends Component {
               <Icon name="home" />
             </Link>
             {this.props.items.map((item, index, items) => [
-              <Breadcrumb.Divider icon='angle right' key={`divider-${item.url}`} />,
+              <Breadcrumb.Divider
+                icon="angle right"
+                key={`divider-${item.url}`}
+              />,
               index < items.length - 1 ? (
                 <Link key={item.url} to={item.url} className="section">
                   {item.title}

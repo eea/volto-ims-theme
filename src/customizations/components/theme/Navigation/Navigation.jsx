@@ -13,8 +13,8 @@ import { Menu, Icon, Image } from 'semantic-ui-react';
 import cx from 'classnames';
 import { getBaseUrl } from '@plone/volto/helpers';
 import { settings } from '~/config';
-
 import { getNavigation } from '@plone/volto/actions';
+import { Anontools, SearchWidget } from '@plone/volto/components';
 
 import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
 
@@ -28,8 +28,6 @@ const messages = defineMessages({
     defaultMessage: 'Open menu',
   },
 });
-
-import { Anontools, SearchWidget } from '@plone/volto/components';
 
 /**
  * Navigation container class.

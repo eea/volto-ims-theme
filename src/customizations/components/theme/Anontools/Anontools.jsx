@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Menu, Icon } from 'semantic-ui-react';
-import { FormattedMessage } from 'react-intl';
 
 import { settings } from '~/config';
 
@@ -63,11 +62,7 @@ class Anontools extends Component {
                   : ''
               }`}
             >
-            <Icon
-                      title="Log in to CMS"
-                      name="sign in"
-                      size="large"
-                    />
+              <Icon title="Log in to CMS" name="sign in" size="large" />
             </Link>
           </Menu.Item>
         </Menu>
