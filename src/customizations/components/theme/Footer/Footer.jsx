@@ -289,64 +289,66 @@ class Footer extends Component {
             </div>
 
             <div className="colophon-section eea-software-info">
-              <p className="colophon-links">
-                <Icon name="database" />
-                Engineered by:&nbsp;
-                <a href="https://www.eea.europa.eu/help/contact-info">
-                  EEA Web Team
-                </a>
-              </p>
+              <div className="ui container">
+                <p className="colophon-links">
+                  <Icon name="database" />
+                  Engineered by:&nbsp;
+                  <a href="https://www.eea.europa.eu/help/contact-info">
+                    EEA Web Team
+                  </a>
+                </p>
 
-              <p className="colophon-links">
-                Software updated on
-                <em> 23 November 2020 18:51 </em>
-                from version <em>20.10.13</em>
-              </p>
-              <p className="colophon-links">
-                Software version:&nbsp;
-                <a href="https://github.com/eea/eea.docker.kgs/releases">
-                  EEA Plone KGS 20.11.21
-                </a>
-              </p>
+                <p className="colophon-links">
+                  Software updated on
+                  <em> 23 November 2020 18:51 </em>
+                  from version <em>20.10.13</em>
+                </p>
+                <p className="colophon-links">
+                  Software version:&nbsp;
+                  <a href="https://github.com/eea/eea.docker.kgs/releases">
+                    EEA Plone KGS 20.11.21
+                  </a>
+                </p>
 
-              <p className="colophon-links">
-                <a
-                  href="https://www.eea.europa.eu/code"
-                  title="Code for developers"
-                >
-                  Code for developers
-                </a>
-              </p>
+                <p className="colophon-links">
+                  <a
+                    href="https://www.eea.europa.eu/code"
+                    title="Code for developers"
+                  >
+                    Code for developers
+                  </a>
+                </p>
 
-              <p className="colophon-links">
-                <a href="https://status.eea.europa.eu" title="Systems Status">
-                  Systems Status
-                </a>
-              </p>
+                <p className="colophon-links">
+                  <a href="https://status.eea.europa.eu" title="Systems Status">
+                    Systems Status
+                  </a>
+                </p>
 
-              <p className="colophon-links">
-                <a href="https://www.eea.europa.eu/legal/">Legal notice</a>
-              </p>
+                <p className="colophon-links">
+                  <a href="https://www.eea.europa.eu/legal/">Legal notice</a>
+                </p>
 
-              <p className="colophon-links">
-                <a
-                  rel="license"
-                  href="http://creativecommons.org/licenses/by/2.5/dk/deed.en_GB"
-                  title="Creative Commons Attribution License"
-                >
-                  <Icon name="creative commons" size="large" />
-                  <span>Creative commons license</span>
-                </a>
-              </p>
+                <p className="colophon-links">
+                  <a
+                    rel="license"
+                    href="http://creativecommons.org/licenses/by/2.5/dk/deed.en_GB"
+                    title="Creative Commons Attribution License"
+                  >
+                    <Icon name="creative commons" size="large" />
+                    <span>Creative commons license</span>
+                  </a>
+                </p>
 
-              <p className="colophon-links">
-                <a
-                  href="https://www.eea.europa.eu/login_form"
-                  title="Log in to CMS"
-                >
-                  <strong>CMS login</strong>
-                </a>
-              </p>
+                <p className="colophon-links">
+                  <a
+                    href="https://www.eea.europa.eu/login_form"
+                    title="Log in to CMS"
+                  >
+                    <strong>CMS login</strong>
+                  </a>
+                </p>
+              </div>
             </div>
           </Segment>
         </div>

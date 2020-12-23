@@ -22,6 +22,7 @@
 .ui.secondary.pointing.menu {
   .item > a > i {
     font-size: 20px;
+    font-weight: 600;
     color: @darkGrey;
     margin: 0;
   }
@@ -47,5 +48,63 @@
   span {
     font-size: 15px;
     color: @darkGrey;
+  }
+}
+
+/*hamburger menu*/
+
+.hamburger-wrapper {
+  display: flex;
+  margin-left: auto;
+  .hamburger--collapse {
+    padding: 0;
+  }
+  .hamburger-box {
+    margin-bottom: 0;
+  }
+}
+
+.hamburger-box {
+  display: flex;
+  justify-content: center;
+  background: transparent none;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  padding: 15px 15px 15px 8px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  display: block !important;
+  width: 22px !important;
+  height: 2px !important;
+  border-radius: 1px !important;
+  background-color: #888 !important;
+}
+.hamburger-inner {
+  margin-bottom: 6px;
+}
+.hamburger-inner::before {
+  top: -8px !important;
+}
+.hamburger-inner::after {
+  top: -16px !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .navigation {
+    flex-direction: column;
+  }
+  .header-wrapper .ui.pointing.secondary.menu {
+    flex-direction: column;
+    background: @blue;
+    padding: 0 15px;
+    .active.item {
+      border: 1px solid @white;
+    }
+  }
+  .navigation-links {
+    display: block !important;
   }
 }
