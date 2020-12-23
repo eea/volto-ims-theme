@@ -20,6 +20,3 @@
 @purple: #8e004d;
 @green: #00888A;
 @black: #333;
-
-@largestWindowSize: 1600px;
-@largestContainerSize: 1400px;

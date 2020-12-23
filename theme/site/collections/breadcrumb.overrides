@@ -4,6 +4,7 @@
 
 .ui.breadcrumb {
   font-size: 12px !important;
+  padding: 0;
   .icon.divider {
     font-size: 15px;
     color: @lighterGray;

@@ -12,8 +12,13 @@
   padding: 8px 0;
 }
 
+.second-footer .ui.segment {
+  border: none;
+  box-shadow: none;
+}
 
-.ui.segment.footer-wrapper{
+.ui.segment.footer-wrapper {
   border: none !important;
   padding: 0 !important;
+  margin-bottom: 0;
 }

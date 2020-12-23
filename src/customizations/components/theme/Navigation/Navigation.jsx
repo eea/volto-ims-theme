@@ -9,12 +9,14 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { NavLink } from 'react-router-dom';
 import { defineMessages, injectIntl } from 'react-intl';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Icon, Image } from 'semantic-ui-react';
 import cx from 'classnames';
 import { getBaseUrl } from '@plone/volto/helpers';
 import { settings } from '~/config';
 
 import { getNavigation } from '@plone/volto/actions';
+
+import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
 
 const messages = defineMessages({
   closeMobileMenu: {
@@ -26,6 +28,8 @@ const messages = defineMessages({
     defaultMessage: 'Open menu',
   },
 });
+
+import { Anontools, SearchWidget } from '@plone/volto/components';
 
 /**
  * Navigation container class.
@@ -165,21 +169,46 @@ class Navigation extends Component {
           }
           onClick={this.closeMobileMenu}
         >
-          {this.props.items.map((item) => (
-            <NavLink
-              to={item.url === '' ? '/' : item.url}
-              key={item.url}
-              className="item"
-              activeClassName="active"
-              exact={
-                settings.isMultilingual
-                  ? item.url === `/${lang}`
-                  : item.url === ''
-              }
-            >
-              {item.title}
-            </NavLink>
-          ))}
+          <div className="navigation-links">
+            {this.props.items.map((item) => (
+              <NavLink
+                to={item.url === '' ? '/' : item.url}
+                key={item.url}
+                className="item"
+                activeClassName="active"
+                exact={
+                  settings.isMultilingual
+                    ? item.url === `/${lang}`
+                    : item.url === ''
+                }
+              >
+                {item.title}
+              </NavLink>
+            ))}
+          </div>
+          <div className="tools-wrapper">
+            <div className="tools-change-language">
+              <Icon name="globe" size="big" />
+              <span>EN</span>
+            </div>
+            <div className="tools-search-wrapper">
+              {!this.props.token && (
+                <div className="tools">
+                  <Anontools />
+                </div>
+              )}
+              <div className="search">
+                <SearchWidget pathname={this.props.pathname} />
+              </div>
+            </div>
+            <Image
+              src={EUflag}
+              alt="The EEA is an agency of the European Union"
+              title="The EEA is an agency of the European Union"
+              height={64}
+              className="eu-flag"
+            />
+          </div>
         </Menu>
       </nav>
     );

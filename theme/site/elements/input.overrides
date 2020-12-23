@@ -2,6 +2,10 @@
       HEADER
 --------------------*/
 
+.tools-search-wrapper .search {
+  margin-bottom: 5px;
+}
+
 .ui.transparent.input {
   order: 1;
 }

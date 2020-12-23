@@ -1,8 +1,16 @@
-@media only screen and (min-width: @largestWindowSize) {
+@media only screen and (min-width: 768px) {
   body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
     .ui.container {
-    width: @largestContainerSize !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+  }
+}
+
+media only screen and (max-width: 767px) {
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    .ui.container {
+    width: auto !important;
+    margin: 0 auto !important;
   }
 }

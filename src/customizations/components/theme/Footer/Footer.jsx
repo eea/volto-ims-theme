@@ -26,7 +26,7 @@ class Footer extends Component {
                 <Header as="h2" className="section-header">
                   <a href="https://www.eionet.europa.eu/">Eionet</a>
                 </Header>
-                <p>
+                <p className="media-centered">
                   European Environment Information and Observation Network
                   (Eionet)
                 </p>
