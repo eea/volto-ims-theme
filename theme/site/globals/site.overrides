@@ -1,0 +1,154 @@
+/*-------------------
+      FOOTER
+--------------------*/
+
+.first-footer,
+.portal-footer {
+  background: @blue !important;
+}
+
+.second-footer,
+.portal-colophon {
+  background: @white !important;
+}
+
+.portal-footer,
+.portal-colophon {
+  padding: 0 !important;
+}
+
+.section-header {
+  margin: 0 0 0.83em 0;
+}
+
+.portal-footer {
+  font-size: 12px;
+  .colophon-section {
+    &:not(:first-child) {
+      border-top: 1px solid rgba(255, 255, 255, 0.23);
+    }
+  }
+  .section-centered {
+    text-align: center;
+    padding: 1.5rem 0;
+    width: 100%;
+    flex-basis: 100%;
+  }
+  h2,
+  p,
+  div,
+  a {
+    color: @white !important;
+  }
+  h2 {
+    font-weight: bold !important;
+  }
+}
+
+.column {
+  @media screen and (min-width: 767px) {
+    width: 100%;
+  }
+}
+
+.first-footer {
+  .media-centered {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .social-media,
+  .media {
+    line-height: 1;
+  }
+  .social-media {
+    display: flex;
+    margin: 0 0.5em;
+    @media screen and (max-width: 665px) {
+      margin-bottom: 1em;
+    }
+    .link-plain i {
+      font-size: 3.5em;
+    }
+  }
+  .media {
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 4em;
+    }
+    .media-body {
+      text-align: left;
+      margin-left: 0.5em;
+      line-height: 1.8;
+    }
+  }
+
+  :not(:last-child).mx-2 {
+    @media screen and (max-width: 665px) {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  .mx-2 {
+    display: flex;
+    align-items: center;
+    margin: 0 2em;
+    line-height: 1;
+    i {
+      font-size: 2.5em;
+    }
+    span {
+      text-align: left;
+      margin: 0 0 0 0.5em;
+      line-height: 1.5;
+    }
+  }
+}
+
+.portal-colophon {
+  .colophon-section {
+    padding: 1.125rem 0;
+  }
+  .europe-agency-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: @lightGrey;
+    font-weight: normal;
+    font-size: 12px;
+    span {
+      margin: 0 1em;
+    }
+  }
+  .eea-software-info {
+    font-size: 11px;
+    border-top: 1px solid rgba(0, 0, 0, 0.11);
+    a {
+      color: @darkBlue;
+      font-weight: bold;
+    }
+  }
+  a {
+    &:hover {
+      color: @darkBlue;
+    }
+  }
+
+  .colophon-links {
+    display: inline-block;
+    margin: 0 1em 0.75em;
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+      text-align: center;
+    }
+    i.creative.commons {
+      font-size: 12px;
+    }
+  }
+}
+
+.eu-flag {
+  width: 60px;
+  height: 38px;
+}

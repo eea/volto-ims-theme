@@ -1,0 +1,48 @@
+/*-------------------
+      HEADER
+--------------------*/
+
+.ui.basic.segment {
+  &.header-wrapper {
+    padding: 0;
+  }
+}
+.header .logo-nav-wrapper {
+  align-items: center;
+  .navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ui.pointing.secondary {
+    display: flex;
+    justify-content: unset;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 !important;
+  }
+  .ui.pointing.secondary .navigation-links {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .ui.pointing.secondary .tools-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+    .tools-search-wrapper {
+      margin-left: 1em;
+    }
+  }
+}
+
+.header .tools-search-wrapper .search form {
+  @media only screen and (min-width: 991px) {
+    padding: 0;
+  }
+}
+
+.hamburgers{
+
+}

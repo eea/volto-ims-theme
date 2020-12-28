@@ -1,0 +1,22 @@
+/*-------------------
+      HEADER
+--------------------*/
+
+.ui.breadcrumb {
+  font-size: 12px !important;
+  padding: 0;
+  .icon.divider {
+    font-size: 15px;
+    color: @lighterGray;
+    margin: 0 5px 0 2px;
+  }
+  .active.section {
+    color: @black !important;
+  }
+  .section {
+    max-width: 220px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
