@@ -9,10 +9,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@eeacms/volto-accordion-block@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@eeacms/volto-accordion-block/-/volto-accordion-block-2.0.2.tgz#bbe903734e477cc917ab3a087948f0052d6b3065"
-  integrity sha512-+UXN0R+jvXUGqX5bDVN0EKxxOGyy1akCxeFlQRE5zEmExMvNfsmzRZ525tpnnnBNuE5Oq/fbpuxKWmxjHGkvvg==
+"@eeacms/volto-accordion-block@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@eeacms/volto-accordion-block/-/volto-accordion-block-1.0.0.tgz#dd9b50cdcfa4360d91948f55d99753201b83d9e5"
+  integrity sha512-akRTx0BrOTh0y/JXllGLrp1gpNEHNrSr1MLca3V48+vt3w+XVFmrnQPLHOfk6Fdh/WZT+y6TpDcEfwaJDzkBbg==
   dependencies:
     "@eeacms/volto-blocks-form" "^1.0.0"
 
