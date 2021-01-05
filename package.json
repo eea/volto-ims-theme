@@ -17,6 +17,7 @@
     "url": "git@github.com:eea/volto-ims-theme.git"
   },
   "addons": [
+    "@eeacms/volto-blocks-form",
     "@eeacms/volto-accordion-block"
   ],
   "dependencies": {
