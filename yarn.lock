@@ -9,10 +9,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@eeacms/volto-accordion-block@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@eeacms/volto-accordion-block/-/volto-accordion-block-1.0.0.tgz#dd9b50cdcfa4360d91948f55d99753201b83d9e5"
-  integrity sha512-akRTx0BrOTh0y/JXllGLrp1gpNEHNrSr1MLca3V48+vt3w+XVFmrnQPLHOfk6Fdh/WZT+y6TpDcEfwaJDzkBbg==
+"@eeacms/volto-accordion-block@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@eeacms/volto-accordion-block/-/volto-accordion-block-2.0.2.tgz#bbe903734e477cc917ab3a087948f0052d6b3065"
+  integrity sha512-+UXN0R+jvXUGqX5bDVN0EKxxOGyy1akCxeFlQRE5zEmExMvNfsmzRZ525tpnnnBNuE5Oq/fbpuxKWmxjHGkvvg==
   dependencies:
     "@eeacms/volto-blocks-form" "^1.0.0"
 
@@ -129,3 +129,8 @@ use-memo-one@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/use-memo-one/-/use-memo-one-1.1.1.tgz#39e6f08fe27e422a7d7b234b5f9056af313bd22c"
   integrity sha512-oFfsyun+bP7RX8X2AskHNTxu+R3QdE/RC5IefMbqptmACAA/gfol1KDD5KRzPsGMa62sWxGZw+Ui43u6x4ddoQ==
+
+yarn@^1.22.10:
+  version "1.22.10"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.10.tgz#c99daa06257c80f8fa2c3f1490724e394c26b18c"
+  integrity sha512-IanQGI9RRPAN87VGTF7zs2uxkSyQSrSPsju0COgbsKQOOXr5LtcVPeyXWgwVa0ywG3d8dg6kSYKGBuYK021qeA==
