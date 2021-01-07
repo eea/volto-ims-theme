@@ -6,6 +6,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
 import { compose } from 'redux';
 import { Link } from 'react-router-dom';
 import { Breadcrumb, Container, Segment, Icon } from 'semantic-ui-react';
