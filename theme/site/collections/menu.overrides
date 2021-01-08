@@ -91,20 +91,109 @@
 .hamburger-inner::after {
   top: -16px !important;
 }
+.hamburger.hamburger--collapse.is-active {
+  .hamburger-inner::before {
+    top: 0px !important;
+  }
+}
+
+.header-wrapper {
+  background: @white !important;
+}
 
 @media only screen and (max-width: 991px) {
-  .navigation {
-    flex-direction: column;
-  }
-  .header-wrapper .ui.pointing.secondary.menu {
+  .header-wrapper .ui.pointing.secondary.stackable.open.menu {
     flex-direction: column;
     background: @blue;
     padding: 0 15px;
-    .active.item {
-      border: 1px solid @white;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    right: 0;
+    top: 60px;
+    z-index: 100;
+    height: 95vh;
+
+    .navigation-links {
+      display: block !important;
+      margin-top: 4em;
+    }
+
+    .navigation-links .item {
+      color: @white;
+      border-bottom: 1px solid #d3d3d3;
+      font-size: 16px;
+    }
+    .navigation-links a.item.active {
+      font-weight: bold;
+    }
+    .navigation-links a:hover {
+      margin-left: -16px;
+      border-left: 5px solid @white;
+    }
+
+    .navigation-links a.item.active {
+      margin-left: -16px;
+      border-left: 5px solid @white;
+    }
+    .tools-wrapper .eu-flag {
+      display: none !important;
     }
   }
-  .navigation-links {
-    display: block !important;
+  .tools-wrapper {
+    flex: 0 1 !important;
+    flex-direction: column;
+    align-items: baseline !important;
+  }
+  .search {
+    order: 1;
+    position: absolute;
+    top: 18px;
+    left: 14px;
+    .field.searchbox {
+      background: @white;
+      padding: 5px 6px;
+      width: 21em;
+      border: 1px solid #bbb;
+    }
+    .search.large.icon {
+      left: 29em;
+      top: 1em;
+      font-size: 0.8em;
+      color: @white;
+    }
+    .ui.form input[type='text'] {
+      font-size: 16px;
+      font-style: italic;
+    }
+  }
+  .tools-search-wrapper {
+    margin-left: 0 !important;
+  }
+  .tools {
+    order: 2;
+    color: @white;
+    flex-direction: column;
+    &:before {
+      content: 'Log in to CMS';
+      border-bottom: 1px solid #d3d3d3;
+    }
+    i {
+      display: none;
+    }
+  }
+  .tools-change-language {
+    margin-top: 1em;
+    color: @white;
+    border-bottom: 1px solid #d3d3d3;
+    &:before {
+      content: 'EEA homepage in your language';
+    }
+    i,
+    span {
+      display: none;
+    }
   }
 }
