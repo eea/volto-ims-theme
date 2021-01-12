@@ -2,7 +2,7 @@
   body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
     .ui.container,
   .second-footer .ui.container {
-    max-width: 1400px !important;
+    width: 92% !important;
     margin: 0 auto !important;
     padding: 0 15px !important;
   }

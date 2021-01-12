@@ -127,7 +127,7 @@ class Navigation extends Component {
       <nav className="navigation">
         <div className="hamburger-wrapper mobile tablet only">
           <button
-            className={cx('hamburger hamburger--collapse', {
+            className={cx('hamburger hamburger--boring', {
               'is-active': this.state.isMobileMenuOpen,
             })}
             aria-label={
