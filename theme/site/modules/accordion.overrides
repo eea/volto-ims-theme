@@ -2,22 +2,8 @@
   margin: 3.7rem 0;
   padding-top: 1px;
   border-top: 3px solid @pureBlack;
-  @media (min-width: 1024px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 }
 
-.accordion-block .accordion {
-  @media (min-width: 1024px) {
-    display: flex;
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    flex: 0 0 49%;
-    align-content: baseline;
-  }
-}
 .accordion-block .content.active {
   @media (min-width: 1024px) {
     padding: 1rem 2rem !important;
