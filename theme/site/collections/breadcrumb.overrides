@@ -5,8 +5,13 @@
 .ui.breadcrumb {
   font-size: 12px !important;
   padding: 0;
+
+  a,
+  a:hover {
+    color: @lightBlue;
+  }
   .icon.divider {
-    font-size: 15px;
+    font-size: 17px;
     color: @lighterGray;
     margin: 0 5px 0 2px;
   }

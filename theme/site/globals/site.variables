@@ -15,9 +15,11 @@
 @lightBlue: #086ca3;
 @darkBlue: #274357;
 @lightGrey: #999;
-@lighterGray: #ccc;
+@lighterGray: #cccccc;
 @darkGrey: #666;
 @purple: #8e004d;
 @green: #00888A;
 @black: #333;
 @pureBlack: #000;
+
+@mobileWidth: 1199px;

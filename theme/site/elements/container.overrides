@@ -1,14 +1,13 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1400px) {
   body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    .ui.container,
-  .second-footer .ui.container {
-    width: 92% !important;
+    .ui.container {
+    width: 1400px !important;
     margin: 0 auto !important;
     padding: 0 15px !important;
   }
 }
 
-@media only screen and (max-width: 991px) and (min-width: 768px) {
+@media only screen and (max-width: 1400px) and (min-width: 768px) {
   body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
     .ui.container {
     width: 100% !important;
