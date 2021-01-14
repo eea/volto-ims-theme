@@ -2,10 +2,6 @@
       HEADER
 --------------------*/
 
-.tools-search-wrapper .search {
-  margin-bottom: 5px;
-}
-
 .ui.transparent.input {
   order: 1;
 }
@@ -47,4 +43,8 @@
     font-size: 15px;
     font-weight: 400;
   }
+}
+
+.ui.form .searchbox.field {
+  padding-left: 0.5em !important;
 }
