@@ -17,3 +17,37 @@
     padding: 0 15px !important;
   }
 }
+
+@media only screen and (max-width: 1279px) and (min-width: 1072px) {
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='mobile only']:not(.computer),
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='tablet only']:not(.computer),
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='computer hidden'],
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='large screen only']:not(.computer),
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='widescreen only']:not(.computer),
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='or lower hidden']:not(.tablet):not(.mobile) {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1279px) {
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='mobile only']:not([class*='large screen']),
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='tablet only']:not([class*='large screen']),
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='computer only']:not([class*='large screen']),
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='large screen hidden'],
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='widescreen only']:not([class*='large screen']),
+  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+    [class*='or lower hidden']:not(.computer):not(.tablet):not(.mobile) {
+    display: block !important;
+  }
+}

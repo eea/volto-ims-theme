@@ -19,6 +19,8 @@
 
 .section-header {
   margin: 0 0 0.83em 0;
+  font-size: 1.375em !important;
+  line-height: 1.2em !important;
 }
 
 .portal-footer {
@@ -56,6 +58,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 12px;
   }
   .social-media,
   .media {

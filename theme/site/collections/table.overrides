@@ -4,6 +4,7 @@
 
 .first-footer {
   .ui.table {
+    font-size: 1em;
     background: none !important;
     border: none !important;
     border-collapse: collapse !important;
@@ -13,21 +14,28 @@
       border-top: none !important;
       padding: 0.2em;
     }
-    :not(.unstackable) .table-link-description {
-      @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 860px) {
+      &:not(.unstackable) .table-link-description {
         font-weight: normal !important;
       }
-    }
-    :not(.unstackable) tr {
-      @media screen and (max-width: 767px) {
+      &:not(.unstackable) tr {
         box-shadow: none !important;
+        padding: 0em !important;
       }
-    }
-    :not(.unstackable) tr.right-row {
-      @media screen and (max-width: 767px) {
+      &:not(.unstackable) tr td {
+        padding: 0em !important;
+      }
+      &:not(.unstackable) tr td.table-link-description {
+        margin-bottom: 1em !important;
+      }
+      &:not(.unstackable) tr.right-row {
         display: flex !important;
         flex-direction: column;
       }
+    }
+    &:first-child,
+    &:last-child {
+      margin: 0em !important;
     }
   }
   .ui.grid {
@@ -37,7 +45,11 @@
   .two-tables {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1500px;
+    justify-content: space-around;
+    font-size: 12px;
     @media only screen and (max-width: 603px) {
       flex-direction: column;
       line-height: 1;
@@ -46,10 +58,9 @@
 
   .left-table,
   .right-table {
-    margin: 0 5em;
     .table-link-title,
     .table-link-description {
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 860px) {
         text-align: center !important;
         width: 100%;
         display: block;
@@ -64,21 +75,16 @@
     text-align: right;
   }
   .left-table .table-link-description {
-    @media screen and (min-width: 768px) {
-      margin-left: 1em;
-    }
-  }
-
-  .right-table .table-link-description {
-    @media screen and (min-width: 768px) {
-      margin: 0 1em 0 0;
+    @media screen and (min-width: 860px) {
+      padding-left: 1em !important;
     }
   }
 
   .right-table .table-link-description {
     text-align: right;
-    @media screen and (max-width: 767px) {
+    @media screen and (min-width: 860px) {
       order: 1;
+      padding-right: 1em !important;
     }
   }
 }

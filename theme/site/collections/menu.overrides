@@ -134,6 +134,7 @@
       display: none !important;
     }
   }
+
   .tools-wrapper {
     flex: 0 1 !important;
     flex-direction: column;
@@ -189,6 +190,7 @@
     }
   }
 }
+
 
 /*Hamburger Menu*/
 
