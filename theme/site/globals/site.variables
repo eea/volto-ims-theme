@@ -2,7 +2,7 @@
        Fonts
 --------------------*/
 
-@fontName: "Open Sans";
+@fontName: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
 
 
 /*-------------------
