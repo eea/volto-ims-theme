@@ -4,29 +4,30 @@
 
 @media only screen and (min-width: @mobileWidth) {
   .navigation .ui.secondary.pointing.menu a.item {
-    font-size: 16px;
+    font-size: 15px;
     text-transform: none !important;
     color: @black;
-    top: 1px;
-    padding: 1.2em 0.75em !important;
-    margin: 5px 0 0 0 !important;
-
+    padding: 1.5em 0.75em 1.2em 0.75em !important;
+    margin: 0 !important;
     &:hover {
       border-bottom: 3px solid @green;
+      top: -1px;
     }
   }
 
-  .navigation .ui.secondary.pointing.menu .item.active {
+  .navigation .ui.secondary.pointing.menu a.item.active {
     border-bottom: 3px solid @green;
     color: @black;
+    top: -1px;
     &:hover {
       border-color: @green;
+      top: -1px;
     }
   }
 
   .ui.secondary.pointing.menu {
     .item > a > i {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
       color: @darkGrey;
       margin: 0;
@@ -41,7 +42,7 @@
     display: flex;
     align-items: center;
     i.globe {
-      font-size: 20px;
+      font-size: 18px;
       color: @darkGrey;
     }
     span {
@@ -49,11 +50,14 @@
       color: @darkGrey;
     }
   }
+  .tools-search-wrapper .search i.search.icon {
+    font-size: 19px;
+  }
 
   .tools-search-wrapper .search .field.searchbox,
   .tools-search-wrapper .item.sign-in,
   .tools-change-language {
-    padding: 1em 0 1em 0.45em !important;
+    padding: 1em 0 1em 0.5em !important;
   }
 
   .tools-search-wrapper .item.sign-in {
@@ -108,7 +112,9 @@
         top: 0;
         left: 0;
         margin-left: -16px;
+        height: 100%;
         border-left: 5px solid @white;
+        background: transparent;
       }
     }
 
@@ -119,7 +125,9 @@
       top: 0;
       left: 0;
       margin-left: -16px;
+      height: 100%;
       border-left: 5px solid @white;
+      background: transparent;
     }
 
     .tools-wrapper .eu-flag {

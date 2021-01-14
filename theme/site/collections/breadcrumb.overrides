@@ -10,6 +10,9 @@
   a:hover {
     color: @lightBlue;
   }
+  i.home.icon {
+    font-size: 13px !important;
+  }
   .icon.divider {
     font-size: 17px;
     color: @lighterGray;
