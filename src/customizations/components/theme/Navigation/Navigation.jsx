@@ -199,13 +199,22 @@ class Navigation extends Component {
                 <SearchWidget pathname={this.props.pathname} />
               </div>
             </div>
-            <Image
-              src={EUflag}
-              alt="The EEA is an agency of the European Union"
-              title="The EEA is an agency of the European Union"
-              height={64}
-              className="eu-flag"
-            />
+            <div>
+              <a
+                href="https://europa.eu/european-union/about-eu_en"
+                title="The EEA is an agency of the European Union"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  src={EUflag}
+                  alt="The EEA is an agency of the European Union"
+                  title="The EEA is an agency of the European Union"
+                  height={64}
+                  className="eu-flag"
+                />
+              </a>
+            </div>
           </div>
         </Menu>
       </nav>
@@ -217,7 +226,13 @@ export default compose(
   injectIntl,
   connect(
     (state) => ({
-      items: state.navigation.items,
+      items:
+        state.navigation.items?.filter(
+          (item) =>
+            !(
+              item?.url?.includes('http://') || item?.url?.includes('https://')
+            ),
+        ) || [],
       lang: state.intl.locale,
     }),
     { getNavigation },
