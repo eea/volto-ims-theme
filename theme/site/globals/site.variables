@@ -4,6 +4,9 @@
 
 @fontName: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
 
+@googleFontName    : @fontName;
+@importGoogleFonts : true;
+@googleFontSizes   : '200,300,400,500,600,700,400italic,700italic';
 
 /*-------------------
       Site Colors

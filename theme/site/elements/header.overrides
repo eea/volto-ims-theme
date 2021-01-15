@@ -21,6 +21,9 @@
 .ui.basic.segment.header-wrapper {
   padding: 0;
 }
+.ui.basic.segment .header {
+  padding: 0 15px;
+}
 .header .logo-nav-wrapper {
   align-items: center;
   .navigation {

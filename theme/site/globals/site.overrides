@@ -2,6 +2,10 @@
       FOOTER
 --------------------*/
 
+html {
+  font-size: initial !important;
+}
+
 .first-footer,
 .portal-footer {
   background: @blue !important;
@@ -18,7 +22,7 @@
 }
 
 .section-header {
-  margin: 0 0 0.83em 0;
+  margin: 0 0 0.83em 0 !important;
   font-size: 1.375em !important;
   line-height: 1.2em !important;
 }
@@ -32,7 +36,7 @@
   }
   .section-centered {
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 1.125rem 0;
     width: 100%;
     flex-basis: 100%;
   }
@@ -70,8 +74,8 @@
     @media screen and (max-width: 665px) {
       margin-bottom: 1em;
     }
-    .link-plain i {
-      font-size: 3.5em;
+    .link-plain.media i {
+      font-size: 4em !important;
     }
   }
   .media {
@@ -99,7 +103,8 @@
     margin: 0 2em;
     line-height: 1;
     i {
-      font-size: 2.5em;
+      font-size: 3em;
+      margin-right: 0;
     }
     span {
       text-align: left;
@@ -110,6 +115,14 @@
 }
 
 .portal-colophon {
+  a {
+    color: @darkBlue;
+    font-weight: bold;
+    &:hover {
+      color: @darkBlue;
+    }
+  }
+
   .colophon-section {
     padding: 1.125rem 0;
   }
@@ -124,20 +137,11 @@
       margin: 0 1em;
     }
   }
+
   .eea-software-info {
     font-size: 11px;
     border-top: 1px solid rgba(0, 0, 0, 0.11);
-    a {
-      color: @darkBlue;
-      font-weight: bold;
-    }
   }
-  a {
-    &:hover {
-      color: @darkBlue;
-    }
-  }
-
   .colophon-links {
     display: inline-block;
     margin: 0 1em 0.75em;

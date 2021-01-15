@@ -12,6 +12,12 @@
   padding: 8px 0;
 }
 
+.ui.basic.segment.content-area {
+  #page-document {
+    padding: 0 15px;
+  }
+}
+
 .second-footer .ui.segment {
   border: none;
   box-shadow: none;
@@ -19,6 +25,6 @@
 
 .ui.segment.footer-wrapper {
   border: none !important;
-  padding: 0 !important;
+  padding: 1.125rem 0 !important;
   margin-bottom: 0;
 }

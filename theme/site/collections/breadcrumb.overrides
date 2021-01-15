@@ -4,7 +4,7 @@
 
 .ui.breadcrumb {
   font-size: 12px !important;
-  padding: 0;
+  padding: 0 15px;
 
   a,
   a:hover {
