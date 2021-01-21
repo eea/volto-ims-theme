@@ -3,19 +3,18 @@
  * @module components/theme/Navigation/Navigation
  */
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-import { NavLink } from 'react-router-dom';
-import { defineMessages, injectIntl } from 'react-intl';
-import { Menu, Icon, Image } from 'semantic-ui-react';
-import cx from 'classnames';
-import { getBaseUrl } from '@plone/volto/helpers';
-import { settings } from '~/config';
 import { getNavigation } from '@plone/volto/actions';
 import { Anontools, SearchWidget } from '@plone/volto/components';
-
+import { getBaseUrl } from '@plone/volto/helpers';
+import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { defineMessages, injectIntl } from 'react-intl';
+import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { compose } from 'redux';
+import { Icon, Image, List, Menu, Popup } from 'semantic-ui-react';
+import { settings } from '~/config';
 import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
 
 const messages = defineMessages({
@@ -28,6 +27,38 @@ const messages = defineMessages({
     defaultMessage: 'Open menu',
   },
 });
+
+const languagesList = [
+  { name: 'Albanian', code: 'sq' },
+  { name: 'Български', code: 'bg' },
+  { name: 'Bosnian', code: 'bs' },
+  { name: 'čeština', code: 'cs' },
+  { name: 'Hrvatski', code: 'hr' },
+  { name: 'dansk', code: 'da' },
+  { name: 'Nederlands', code: 'nl' },
+  { name: 'ελληνικά', code: 'el' },
+  { name: 'English', code: 'en' },
+  { name: 'eesti', code: 'et' },
+  { name: 'Suomi', code: 'fi' },
+  { name: 'Français', code: 'fr' },
+  { name: 'Deutsch', code: 'de' },
+  { name: 'magyar', code: 'hu' },
+  { name: 'Íslenska', code: 'is' },
+  { name: 'italiano', code: 'it' },
+  { name: 'Latviešu', code: 'lv' },
+  { name: 'lietuvių', code: 'lt' },
+  { name: 'Macedonian', code: 'mk' },
+  { name: 'Malti', code: 'mt' },
+  { name: 'Norsk', code: 'no' },
+  { name: 'polski', code: 'pl' },
+  { name: 'Português', code: 'pt' },
+  { name: 'Română', code: 'ro' },
+  { name: 'slovenčina', code: 'sk' },
+  { name: 'Slovenščina', code: 'sl' },
+  { name: 'Español', code: 'es' },
+  { name: 'Svenska', code: 'sv' },
+  { name: 'Türkçe', code: 'tr' },
+];
 
 /**
  * Navigation container class.
@@ -165,7 +196,6 @@ class Navigation extends Component {
               ? 'open'
               : 'large screen widescreen only'
           }
-          onClick={this.closeMobileMenu}
         >
           <div className="navigation-links">
             {this.props.items.map((item) => (
@@ -179,16 +209,41 @@ class Navigation extends Component {
                     ? item.url === `/${lang}`
                     : item.url === ''
                 }
+                onClick={this.closeMobileMenu}
               >
                 {item.title}
               </NavLink>
             ))}
           </div>
           <div className="tools-wrapper">
-            <div className="tools-change-language">
-              <Icon name="globe" size="big" />
-              <span>EN</span>
-            </div>
+            <Popup
+              on="click"
+              trigger={
+                <div className="tools-change-language">
+                  <Icon name="globe" size="big" />
+                  <span>EN</span>
+                </div>
+              }
+              content={
+                <List divided relaxed>
+                  {languagesList.map((language) => (
+                    <List.Item>
+                      <List.Content>
+                        <List.Description as="a">
+                          <a
+                            href={`https://www.eea.europa.eu/${language.code}`}
+                          >
+                            {`${language.name} (${language.code})`}
+                          </a>
+                        </List.Description>
+                      </List.Content>
+                    </List.Item>
+                  ))}
+                </List>
+              }
+              position="top left"
+            />
+
             <div className="tools-search-wrapper">
               {!this.props.token && (
                 <div className="tools">

@@ -45,6 +45,43 @@
   }
 }
 
+.ui.search-custom-eea {
+	justify-content: center;
+	width: 70px;
+	&,
+	&:hover {
+		background: @darkBlue;
+		color: white;
+	}
+}
+
+.eea-search-links {
+	a {
+    color: #004B87;
+    font-weight: normal;
+		font-size: 12px;
+	}
+	.pull-right {
+		float: right;
+	}
+	.pull-left {
+		float: left;
+	}
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.custom-search-pop {
+	.ui.mini.input > input{
+		font-size: 16px;
+    padding: 0 5px;
+	}
+}
+
 .ui.form .searchbox.field {
   padding-left: 0.5em !important;
 }
