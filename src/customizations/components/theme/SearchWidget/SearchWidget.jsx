@@ -74,7 +74,6 @@ class SearchWidget extends Component {
    */
   onLinkClick(evt, url) {
     evt.preventDefault();
-    this.closeMobileMenu();
     window.location = url;
   }
 
