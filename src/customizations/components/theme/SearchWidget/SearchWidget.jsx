@@ -113,7 +113,7 @@ class SearchWidget extends Component {
    * @param {string} data
    */
   searchSuggestions = async (data) => {
-    const searchTernUrl = `https://www.eea.europa.eu/eea-custom-search.tags?q=${data}`;
+    const searchTernUrl = `https://www.eea.europa.eu/api/eea-custom-search.tags?q=${data}`;
     const result = await this.props.getProxiedExternalContent(searchTernUrl);
     const resultFinal = Array.isArray(result) ? result : JSON.parse(result);
 
