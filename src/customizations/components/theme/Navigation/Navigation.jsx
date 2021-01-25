@@ -264,7 +264,6 @@ class Navigation extends Component {
                   onClick={this.handleClick}
                   className="languages-title-list"
                 >
-                  <Icon name="dropdown" />
                   EEA homepage in your language
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 0}>
@@ -290,7 +289,7 @@ class Navigation extends Component {
             <div className="tools-search-wrapper">
               {!this.props.token && (
                 <div className="tools">
-                  <Anontools />
+                  <Anontools handleClick={this.closeMobileMenu} />
                 </div>
               )}
               <div className="search">

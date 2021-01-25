@@ -26,6 +26,7 @@ class Anontools extends Component {
     content: PropTypes.shape({
       '@id': PropTypes.string,
     }),
+    handleClick: PropTypes.func,
   };
 
   /**
@@ -51,6 +52,7 @@ class Anontools extends Component {
         <Menu pointing secondary floated="right">
           <Menu.Item className="sign-in">
             <Link
+              onClick={this.props.handleClick}
               aria-label="login"
               to={`/login${
                 this.props.content
