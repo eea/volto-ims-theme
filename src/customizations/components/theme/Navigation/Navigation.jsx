@@ -13,7 +13,7 @@ import { defineMessages, injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { compose } from 'redux';
-import { Icon, Image, List, Menu, Popup } from 'semantic-ui-react';
+import { Accordion, Icon, Image, List, Menu, Popup } from 'semantic-ui-react';
 import { settings } from '~/config';
 import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
 
@@ -27,7 +27,6 @@ const messages = defineMessages({
     defaultMessage: 'Open menu',
   },
 });
-
 const languagesList = [
   { name: 'Albanian', code: 'sq' },
   { name: 'Български', code: 'bg' },
@@ -95,6 +94,7 @@ class Navigation extends Component {
     this.closeMobileMenu = this.closeMobileMenu.bind(this);
     this.state = {
       isMobileMenuOpen: false,
+      activeIndex: -1,
     };
   }
 
@@ -125,6 +125,14 @@ class Navigation extends Component {
     }
   }
 
+  handleClick = (e, titleProps) => {
+    const { index } = titleProps;
+    const { activeIndex } = this.state;
+    const newIndex = activeIndex === index ? -1 : index;
+
+    this.setState({ activeIndex: newIndex });
+  };
+
   /**
    * Toggle mobile menu's open state
    * @method toggleMobileMenu
@@ -153,6 +161,7 @@ class Navigation extends Component {
    */
   render() {
     const { lang } = this.props;
+    const { activeIndex } = this.state;
 
     return (
       <nav className="navigation">
@@ -215,9 +224,12 @@ class Navigation extends Component {
               </NavLink>
             ))}
           </div>
+
           <div className="tools-wrapper">
+            {/* <LanguagesWidget></LanguagesWidget> */}
             <Popup
               on="click"
+              className="large screen only custom-search-pop"
               trigger={
                 <div className="tools-change-language">
                   <Icon name="globe" size="big" />
@@ -225,11 +237,11 @@ class Navigation extends Component {
                 </div>
               }
               content={
-                <List divided relaxed>
-                  {languagesList.map((language) => (
-                    <List.Item>
+                <List bulleted className="languages-list">
+                  {languagesList.map((language, index) => (
+                    <List.Item key={index}>
                       <List.Content>
-                        <List.Description as="a">
+                        <List.Description>
                           <a
                             href={`https://www.eea.europa.eu/${language.code}`}
                           >
@@ -243,6 +255,37 @@ class Navigation extends Component {
               }
               position="top left"
             />
+
+            <div className="mobile tablet computer only fill-width">
+              <Accordion fluid styled>
+                <Accordion.Title
+                  active={activeIndex === 0}
+                  index={0}
+                  onClick={this.handleClick}
+                  className="languages-title-list"
+                >
+                  <Icon name="dropdown" />
+                  EEA homepage in your language
+                </Accordion.Title>
+                <Accordion.Content active={activeIndex === 0}>
+                  <List bulleted className="languages-list">
+                    {languagesList.map((language, index) => (
+                      <List.Item key={index}>
+                        <List.Content>
+                          <List.Description>
+                            <a
+                              href={`https://www.eea.europa.eu/${language.code}`}
+                            >
+                              {`${language.name} (${language.code})`}
+                            </a>
+                          </List.Description>
+                        </List.Content>
+                      </List.Item>
+                    ))}
+                  </List>
+                </Accordion.Content>
+              </Accordion>
+            </div>
 
             <div className="tools-search-wrapper">
               {!this.props.token && (

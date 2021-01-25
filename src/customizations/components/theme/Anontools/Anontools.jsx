@@ -3,12 +3,11 @@
  * @module components/theme/Anontools/Anontools
  */
 
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Menu, Icon } from 'semantic-ui-react';
-
+import { Icon, Menu } from 'semantic-ui-react';
 import { settings } from '~/config';
 
 /**
@@ -62,6 +61,9 @@ class Anontools extends Component {
                   : ''
               }`}
             >
+              <div className="text-white mobile tablet computer only">
+                Login to CMS
+              </div>
               <Icon title="Log in to CMS" name="sign in" size="large" />
             </Link>
           </Menu.Item>

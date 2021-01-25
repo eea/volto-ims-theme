@@ -12,12 +12,12 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import {
+  Accordion,
   Button,
   Form,
   Icon,
   Input,
   List,
-  Menu,
   Popup
 } from 'semantic-ui-react';
 
@@ -62,6 +62,7 @@ class SearchWidget extends Component {
       text: '',
       section: false,
       suggestedWords: [],
+      activeIndex: -1,
     };
   }
 
@@ -79,6 +80,13 @@ class SearchWidget extends Component {
     this.searchSuggestions(value);
   }
 
+  handleClick = (e, titleProps) => {
+    const { index } = titleProps;
+    const { activeIndex } = this.state;
+    const newIndex = activeIndex === index ? -1 : index;
+
+    this.setState({ activeIndex: newIndex });
+  };
   /**
    * On change section
    * @method onChangeSection
@@ -93,7 +101,7 @@ class SearchWidget extends Component {
   }
 
   /**
-   * On go to the
+   * On go to the search page
    * @method onGoToSearchPage
    */
   onGoToSearchPage() {
@@ -127,7 +135,7 @@ class SearchWidget extends Component {
         <Popup
           position="bottom center"
           style={{ width: '446px', maxWidth: '500px' }}
-          className="lol large screen only custom-search-pop"
+          className="large screen only custom-search-pop"
           content={
             <div>
               <Input
@@ -138,12 +146,15 @@ class SearchWidget extends Component {
                 fluid
                 size="mini"
                 value={this.state.text}
+                autoComplete="off"
+                name="q"
               >
                 <input />
                 <Button
                   className="search-custom-eea"
                   onClick={this.onGoToSearchPage}
                   icon="search"
+                  size="mini"
                 ></Button>
               </Input>
 
@@ -161,13 +172,17 @@ class SearchWidget extends Component {
                   A-Z Glossary
                 </a>
               </div>
-              <List divided relaxed>
+              <List divided className="suggested-this.state.suggestedWords">
                 {this.state.suggestedWords.map((word, index) => (
                   <List.Item key={index}>
                     <List.Content>
-                      <List.Description as="a">
-                        <a href={`http://search.apps.eea.europa.eu?q=${word}`}>
-                          {word}
+                      <List.Description>
+                        <a
+                          href={`http://search.apps.eea.europa.eu?q=${word}`}
+                          className="suggested-item"
+                        >
+                          <strong>{this.state.text}</strong>
+                          {word.slice(this.state.text.length, word.length)}
                         </a>
                       </List.Description>
                     </List.Content>
@@ -204,37 +219,57 @@ class SearchWidget extends Component {
         />
 
         <div className="mobile tablet computer only">
-          <Form>
+          <Form
+            action="https://www.eea.europa.eu/eea-custom-search"
+            method="get"
+          >
             <Form.Field className="searchbox">
-              <Input
-                aria-label={this.props.intl.formatMessage(messages.search)}
-                name="SearchableText"
-                transparent
-                autoComplete="off"
-                placeholder={this.props.intl.formatMessage(messages.searchSite)}
-                title={this.props.intl.formatMessage(messages.search)}
-                onChange={this.onChangeText}
-                value={this.state.text}
-              />
-
+              <Accordion fluid>
+                <Accordion.Title
+                  active={this.state.activeIndex === 0}
+                  index={0}
+                  onClick={this.handleClick}
+                >
+                  <Input
+                    aria-label={this.props.intl.formatMessage(messages.search)}
+                    name="q"
+                    transparent
+                    autoComplete="off"
+                    placeholder={this.props.intl.formatMessage(
+                      messages.searchSite,
+                    )}
+                    title={this.props.intl.formatMessage(messages.search)}
+                    onChange={this.onChangeText}
+                    value={this.state.text}
+                  />
+                </Accordion.Title>
+                <Accordion.Content active={this.state.activeIndex === 0}>
+                  <List divided className="suggested-this.state.suggestedWords">
+                    {this.state.suggestedWords.map((word, index) => (
+                      <List.Item key={index}>
+                        <List.Content>
+                          <List.Description>
+                            <a
+                              href={`http://search.apps.eea.europa.eu?q=${word}`}
+                              className="suggested-item"
+                            >
+                              <strong>{this.state.text}</strong>
+                              {word.slice(this.state.text.length, word.length)}
+                            </a>
+                          </List.Description>
+                        </List.Content>
+                      </List.Item>
+                    ))}
+                  </List>
+                </Accordion.Content>
+              </Accordion>
               <button
                 aria-label={this.props.intl.formatMessage(messages.search)}
+                onClick={this.onGoToSearchPage}
               >
                 <Icon name="search" size="large" />
               </button>
             </Form.Field>
-            {this.state.suggestedWords.length > 0 && (
-              <Menu vertical fluid>
-                {this.state.suggestedWords.map((word, index) => (
-                  <Menu.Item
-                    key={`menu-${index}`}
-                    href={`http://search.apps.eea.europa.eu?q=${word}`}
-                  >
-                    {word}
-                  </Menu.Item>
-                ))}
-              </Menu>
-            )}
           </Form>
         </div>
       </>
