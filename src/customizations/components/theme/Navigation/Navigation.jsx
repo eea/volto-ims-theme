@@ -3,19 +3,26 @@
  * @module components/theme/Navigation/Navigation
  */
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-import { NavLink } from 'react-router-dom';
-import { defineMessages, injectIntl } from 'react-intl';
-import { Menu, Icon, Image } from 'semantic-ui-react';
-import cx from 'classnames';
-import { getBaseUrl } from '@plone/volto/helpers';
-import { settings } from '~/config';
 import { getNavigation } from '@plone/volto/actions';
 import { Anontools, SearchWidget } from '@plone/volto/components';
-
+import { getBaseUrl } from '@plone/volto/helpers';
+import cx from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { defineMessages, injectIntl } from 'react-intl';
+import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { compose } from 'redux';
+import {
+  Accordion,
+  Button,
+  Icon,
+  Image,
+  List,
+  Menu,
+  Popup
+} from 'semantic-ui-react';
+import { settings } from '~/config';
 import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
 
 const messages = defineMessages({
@@ -28,6 +35,37 @@ const messages = defineMessages({
     defaultMessage: 'Open menu',
   },
 });
+const languagesList = [
+  { name: 'Albanian', code: 'sq' },
+  { name: 'Български', code: 'bg' },
+  { name: 'Bosnian', code: 'bs' },
+  { name: 'čeština', code: 'cs' },
+  { name: 'Hrvatski', code: 'hr' },
+  { name: 'dansk', code: 'da' },
+  { name: 'Nederlands', code: 'nl' },
+  { name: 'ελληνικά', code: 'el' },
+  { name: 'English', code: 'en' },
+  { name: 'eesti', code: 'et' },
+  { name: 'Suomi', code: 'fi' },
+  { name: 'Français', code: 'fr' },
+  { name: 'Deutsch', code: 'de' },
+  { name: 'magyar', code: 'hu' },
+  { name: 'Íslenska', code: 'is' },
+  { name: 'italiano', code: 'it' },
+  { name: 'Latviešu', code: 'lv' },
+  { name: 'lietuvių', code: 'lt' },
+  { name: 'Macedonian', code: 'mk' },
+  { name: 'Malti', code: 'mt' },
+  { name: 'Norsk', code: 'no' },
+  { name: 'polski', code: 'pl' },
+  { name: 'Português', code: 'pt' },
+  { name: 'Română', code: 'ro' },
+  { name: 'slovenčina', code: 'sk' },
+  { name: 'Slovenščina', code: 'sl' },
+  { name: 'Español', code: 'es' },
+  { name: 'Svenska', code: 'sv' },
+  { name: 'Türkçe', code: 'tr' },
+];
 
 /**
  * Navigation container class.
@@ -62,9 +100,44 @@ class Navigation extends Component {
     super(props);
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
     this.closeMobileMenu = this.closeMobileMenu.bind(this);
+    this.onLinkClick = this.onLinkClick.bind(this);
     this.state = {
       isMobileMenuOpen: false,
+      activeIndex: -1,
+      is_visible: false,
     };
+  }
+
+  componentDidMount() {
+    var scrollComponent = this;
+    document.addEventListener('scroll', function (e) {
+      scrollComponent.toggleVisibility();
+    });
+  }
+
+  /**
+   * Toggle visibility based on page y offset
+   */
+  toggleVisibility() {
+    if (window.pageYOffset > 300) {
+      this.setState({
+        is_visible: true,
+      });
+    } else {
+      this.setState({
+        is_visible: false,
+      });
+    }
+  }
+
+  /**
+   * Will scroll to top
+   */
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }
 
   /**
@@ -93,11 +166,22 @@ class Navigation extends Component {
       );
     }
   }
+  /**
+   * Will toggle open/close
+   * @param {Object} e - event
+   * @param {number} titleProps - index of the content to be revealed
+   */
+  toggleOpenAccordion = (e, titleProps) => {
+    const { index } = titleProps;
+    const { activeIndex } = this.state;
+    const newIndex = activeIndex === index ? -1 : index;
+
+    this.setState({ activeIndex: newIndex });
+  };
 
   /**
    * Toggle mobile menu's open state
    * @method toggleMobileMenu
-   * @returns {undefined}
    */
   toggleMobileMenu() {
     this.setState({ isMobileMenuOpen: !this.state.isMobileMenuOpen });
@@ -106,7 +190,6 @@ class Navigation extends Component {
   /**
    * Close mobile menu
    * @method closeMobileMenu
-   * @returns {undefined}
    */
   closeMobileMenu() {
     if (!this.state.isMobileMenuOpen) {
@@ -116,12 +199,24 @@ class Navigation extends Component {
   }
 
   /**
+   * Click an internal link
+   * @method onLinkClick
+   * @returns {undefined}
+   */
+  onLinkClick(evt, url) {
+    evt.preventDefault();
+    this.closeMobileMenu();
+    window.location = url;
+  }
+
+  /**
    * Render method.
    * @method render
    * @returns {string} Markup for the component.
    */
   render() {
     const { lang } = this.props;
+    const { activeIndex, is_visible } = this.state;
 
     return (
       <nav className="navigation">
@@ -165,7 +260,6 @@ class Navigation extends Component {
               ? 'open'
               : 'large screen widescreen only'
           }
-          onClick={this.closeMobileMenu}
         >
           <div className="navigation-links">
             {this.props.items.map((item) => (
@@ -179,20 +273,84 @@ class Navigation extends Component {
                     ? item.url === `/${lang}`
                     : item.url === ''
                 }
+                onClick={(evt) => this.onLinkClick(evt, item.url || '/')}
               >
                 {item.title}
               </NavLink>
             ))}
           </div>
+
           <div className="tools-wrapper">
-            <div className="tools-change-language">
-              <Icon name="globe" size="big" />
-              <span>EN</span>
+            {/* <LanguagesWidget></LanguagesWidget> */}
+            <Popup
+              on="click"
+              className="large screen only custom-search-pop"
+              trigger={
+                <div className="tools-change-language">
+                  <Icon name="globe" size="big" />
+                  <span>EN</span>
+                </div>
+              }
+              content={
+                <List bulleted className="languages-list">
+                  {languagesList.map((language, index) => (
+                    <List.Item key={index}>
+                      <List.Content>
+                        <List.Description>
+                          <a
+                            href={`/${language.code}`}
+                            onClick={(evt) =>
+                              this.onLinkClick(evt, `/${language.code}`)
+                            }
+                          >
+                            {`${language.name} (${language.code})`}
+                          </a>
+                        </List.Description>
+                      </List.Content>
+                    </List.Item>
+                  ))}
+                </List>
+              }
+              position="top left"
+            />
+
+            <div className="mobile tablet computer only fill-width">
+              <Accordion fluid styled>
+                <Accordion.Title
+                  active={activeIndex === 0}
+                  index={0}
+                  onClick={this.toggleOpenAccordion}
+                  className="languages-title-list"
+                >
+                  EEA homepage in your language
+                </Accordion.Title>
+                <Accordion.Content active={activeIndex === 0}>
+                  <List bulleted className="languages-list">
+                    {languagesList.map((language, index) => (
+                      <List.Item key={index}>
+                        <List.Content>
+                          <List.Description>
+                            <a
+                              href={`/${language.code}`}
+                              onClick={(evt) =>
+                                this.onLinkClick(evt, `/${language.code}`)
+                              }
+                            >
+                              {`${language.name} (${language.code})`}
+                            </a>
+                          </List.Description>
+                        </List.Content>
+                      </List.Item>
+                    ))}
+                  </List>
+                </Accordion.Content>
+              </Accordion>
             </div>
+
             <div className="tools-search-wrapper">
               {!this.props.token && (
                 <div className="tools">
-                  <Anontools />
+                  <Anontools handleClick={this.closeMobileMenu} />
                 </div>
               )}
               <div className="search">
@@ -217,6 +375,14 @@ class Navigation extends Component {
             </div>
           </div>
         </Menu>
+
+        {/* Back to top button */}
+
+        {is_visible && (
+          <Button icon id="button" onClick={() => this.scrollToTop()}>
+            <Icon name="arrow up" />
+          </Button>
+        )}
       </nav>
     );
   }

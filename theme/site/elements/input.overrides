@@ -45,6 +45,136 @@
   }
 }
 
+.ui.search-custom-eea {
+	justify-content: center;
+	width: 70px;
+	&,
+	&:hover {
+		background: @darkBlue;
+		color: white;
+	}
+}
+
+.eea-search-links {
+	a {
+    color: #004B87;
+    font-weight: normal;
+		font-size: 12px;
+	}
+	.pull-right {
+		float: right;
+	}
+	.pull-left {
+		float: left;
+	}
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.custom-search-pop {
+	.ui.mini.input > input{
+		font-size: 16px;
+    padding: 0 5px;
+	}
+}
+
 .ui.form .searchbox.field {
   padding-left: 0.5em !important;
+}
+
+.ui.list > .item a.suggested-item {
+	font-size: 16px;
+	color: black;
+}
+
+.languages-list {
+	ul&.ui.list li:before, 
+	&.ui.bulleted.list .list > .item:before,
+	&.ui.bulleted.list > .item:before {
+		content: '▪';
+		color: @blue;
+	}
+	&.ui.list > .item a,
+	&.ui.list .list > .item a {
+		cursor: pointer;
+		line-height: normal;
+		font-size: .7rem;
+
+		@media only screen and (max-width: @mobileWidth) {
+			font-size: .9rem;
+		}
+	}
+
+	@media only screen and (max-width: @mobileWidth) {
+		.navigation .ui.secondary.pointing.menu & .item {
+			padding: 0;
+			margin: 0;
+		}
+		.ui.styled.accordion & .content {
+			padding: 0;
+		}
+	}
+}
+
+.navigation,
+.tools {
+	.ui.secondary.pointing.menu {
+		border: 0;
+		margin: 0 0 0 40px;
+
+		@media only screen and (max-width: @largestTabletScreen) {
+			margin-bottom: 20px;
+			margin-left: 0;
+		}
+
+		.item {
+			padding-top: 0;
+			margin: 0;
+			text-transform: none;
+
+			@media only screen and (min-width: @largestTabletScreen) {
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.suggested-list {
+	a {
+		color: black;
+		font-size: .8rem
+	}
+}
+
+.languages-list-mobile {
+	padding: 0;
+}
+
+#button {
+  display: inline-block;
+  background-color: @green;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  z-index: 70;
+	border: none;
+	color: white;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: @lightGreen;
+}
+#button:active {
+  background-color: @lightGreen;
 }

@@ -139,6 +139,18 @@
     flex: 0 1 !important;
     flex-direction: column;
     align-items: baseline !important;
+		
+		.ui.accordion .languages-title-list.title:not(.ui),
+		.ui.styled.accordion .languages-title-list.title:hover, 
+		.ui.styled.accordion .languages-title-list.active.title {
+			color: @white;
+			font-size: 16px;
+			background: #004B87;
+			color: #FFFFFF;
+			border-bottom: 1px solid #d3d3d3;
+			text-transform: none;
+			padding-left: 0;
+		}
   }
   .search {
     order: 1;
@@ -152,7 +164,7 @@
       border: 1px solid #bbb;
     }
     .search.large.icon {
-      left: 29em;
+      left: 27em;
       top: 1em;
       font-size: 0.8em;
       color: @white;
@@ -170,7 +182,6 @@
     color: @white;
     flex-direction: column;
     &:before {
-      content: 'Log in to CMS';
       border-bottom: 1px solid #d3d3d3;
     }
     i {
@@ -181,9 +192,6 @@
     margin-top: 1em;
     color: @white;
     border-bottom: 1px solid #d3d3d3;
-    &:before {
-      content: 'EEA homepage in your language';
-    }
     i,
     span {
       display: none;
@@ -191,6 +199,11 @@
   }
 }
 
+.sign-in {
+	a {
+		color: white;
+	}
+}
 
 /*Hamburger Menu*/
 
@@ -237,4 +250,8 @@
   .hamburger-inner:after {
     top: 1px !important;
   }
+}
+
+.fill-width {
+	width: 100%
 }
