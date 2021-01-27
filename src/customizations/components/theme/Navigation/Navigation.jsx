@@ -13,7 +13,15 @@ import { defineMessages, injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { compose } from 'redux';
-import { Accordion, Icon, Image, List, Menu, Popup } from 'semantic-ui-react';
+import {
+  Accordion,
+  Button,
+  Icon,
+  Image,
+  List,
+  Menu,
+  Popup
+} from 'semantic-ui-react';
 import { settings } from '~/config';
 import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
 
@@ -95,7 +103,40 @@ class Navigation extends Component {
     this.state = {
       isMobileMenuOpen: false,
       activeIndex: -1,
+      is_visible: false,
     };
+  }
+
+  componentDidMount() {
+    var scrollComponent = this;
+    document.addEventListener('scroll', function (e) {
+      scrollComponent.toggleVisibility();
+    });
+  }
+
+  /**
+   * Toggle visibility based on page y offset
+   */
+  toggleVisibility() {
+    if (window.pageYOffset > 300) {
+      this.setState({
+        is_visible: true,
+      });
+    } else {
+      this.setState({
+        is_visible: false,
+      });
+    }
+  }
+
+  /**
+   * Will scroll to top
+   */
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }
 
   /**
@@ -124,8 +165,12 @@ class Navigation extends Component {
       );
     }
   }
-
-  handleClick = (e, titleProps) => {
+  /**
+   * Will toggle open/close
+   * @param {Object} e - event
+   * @param {number} titleProps - index of the content to be revealed
+   */
+  toggleOpenAccordion = (e, titleProps) => {
     const { index } = titleProps;
     const { activeIndex } = this.state;
     const newIndex = activeIndex === index ? -1 : index;
@@ -136,7 +181,6 @@ class Navigation extends Component {
   /**
    * Toggle mobile menu's open state
    * @method toggleMobileMenu
-   * @returns {undefined}
    */
   toggleMobileMenu() {
     this.setState({ isMobileMenuOpen: !this.state.isMobileMenuOpen });
@@ -145,7 +189,6 @@ class Navigation extends Component {
   /**
    * Close mobile menu
    * @method closeMobileMenu
-   * @returns {undefined}
    */
   closeMobileMenu() {
     if (!this.state.isMobileMenuOpen) {
@@ -161,7 +204,7 @@ class Navigation extends Component {
    */
   render() {
     const { lang } = this.props;
-    const { activeIndex } = this.state;
+    const { activeIndex, is_visible } = this.state;
 
     return (
       <nav className="navigation">
@@ -261,7 +304,7 @@ class Navigation extends Component {
                 <Accordion.Title
                   active={activeIndex === 0}
                   index={0}
-                  onClick={this.handleClick}
+                  onClick={this.toggleOpenAccordion}
                   className="languages-title-list"
                 >
                   EEA homepage in your language
@@ -314,6 +357,14 @@ class Navigation extends Component {
             </div>
           </div>
         </Menu>
+
+        {/* Back to top button */}
+
+        {is_visible && (
+          <Button icon id="button" onClick={() => this.scrollToTop()}>
+            <Icon name="arrow up" />
+          </Button>
+        )}
       </nav>
     );
   }
