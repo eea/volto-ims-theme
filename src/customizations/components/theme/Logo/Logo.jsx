@@ -32,11 +32,16 @@ const messages = defineMessages({
 const Logo = () => {
   const lang = useSelector((state) => state.intl.locale);
   const intl = useIntl();
+  const url = settings.isMultilingual ? `/${lang}` : '/';
 
   return (
     <Link
-      to={settings.isMultilingual ? `/${lang}` : '/'}
+      to={url}
       title={intl.formatMessage(messages.site)}
+      onClick={(evt) => {
+        evt.preventDefault();
+        window.location = url;
+      }}
     >
       <Image
         src={LogoImage}

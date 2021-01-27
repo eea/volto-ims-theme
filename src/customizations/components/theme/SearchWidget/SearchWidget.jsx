@@ -18,7 +18,7 @@ import {
   Icon,
   Input,
   List,
-  Popup
+  Popup,
 } from 'semantic-ui-react';
 
 const messages = defineMessages({
@@ -58,12 +58,23 @@ class SearchWidget extends Component {
     this.onChangeText = this.onChangeText.bind(this);
     this.onChangeSection = this.onChangeSection.bind(this);
     this.onGoToSearchPage = this.onGoToSearchPage.bind(this);
+    this.onLinkClick = this.onLinkClick.bind(this);
     this.state = {
       text: '',
       section: false,
       suggestedWords: [],
       activeIndex: -1,
     };
+  }
+
+  /**
+   * Click an internal link
+   * @method onLinkClick
+   * @returns {undefined}
+   */
+  onLinkClick(evt, url) {
+    evt.preventDefault();
+    window.location = url;
   }
 
   /**
@@ -168,6 +179,12 @@ class SearchWidget extends Component {
                 <a
                   className="pull-right"
                   href="https://www.eea.europa.eu/help/glossary"
+                  onClick={(evt) =>
+                    this.onLinkClick(
+                      evt,
+                      'https://www.eea.europa.eu/help/glossary',
+                    )
+                  }
                 >
                   A-Z Glossary
                 </a>

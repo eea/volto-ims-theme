@@ -15,6 +15,11 @@ import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
  * @returns {string} Markup of the component
  */
 class Footer extends Component {
+  onLinkClick(evt, url) {
+    evt.preventDefault();
+    window.location = url;
+  }
+
   render() {
     return (
       <Segment className="footer-wrapper">
@@ -244,18 +249,40 @@ class Footer extends Component {
                     </span>
                   </div>
                   <div className="mx-2">
-                    <a href="https://www.eea.europa.eu/contact-us">
+                    <a
+                      href="https://www.eea.europa.eu/contact-us"
+                      onClick={(evt) =>
+                        this.onLinkClick(
+                          evt,
+                          'https://www.eea.europa.eu/contact-us',
+                        )
+                      }
+                    >
                       <Icon name="comment" />
                     </a>
                     <span>
                       <a
                         href="https://www.eea.europa.eu/contact-us"
                         className="block"
+                        onClick={(evt) =>
+                          this.onLinkClick(
+                            evt,
+                            'https://www.eea.europa.eu/contact-us',
+                          )
+                        }
                       >
                         Ask your question
                       </a>
                       <br />
-                      <a href="https://www.eea.europa.eu/media/">
+                      <a
+                        href="https://www.eea.europa.eu/media/"
+                        onClick={(evt) =>
+                          this.onLinkClick(
+                            evt,
+                            'https://www.eea.europa.eu/media/',
+                          )
+                        }
+                      >
                         Media enquiries
                       </a>
                     </span>
@@ -293,7 +320,15 @@ class Footer extends Component {
                 <p className="colophon-links">
                   <Icon name="database" />
                   Engineered by:&nbsp;
-                  <a href="https://www.eea.europa.eu/help/contact-info">
+                  <a
+                    href="https://www.eea.europa.eu/help/contact-info"
+                    onClick={(evt) =>
+                      this.onLinkClick(
+                        evt,
+                        'https://www.eea.europa.eu/help/contact-info',
+                      )
+                    }
+                  >
                     EEA Web Team
                   </a>
                 </p>
@@ -313,6 +348,9 @@ class Footer extends Component {
                 <p className="colophon-links">
                   <a
                     href="https://www.eea.europa.eu/code"
+                    onClick={(evt) =>
+                      this.onLinkClick(evt, 'https://www.eea.europa.eu/code')
+                    }
                     title="Code for developers"
                   >
                     Code for developers
@@ -326,7 +364,14 @@ class Footer extends Component {
                 </p>
 
                 <p className="colophon-links">
-                  <a href="https://www.eea.europa.eu/legal/">Legal notice</a>
+                  <a
+                    href="https://www.eea.europa.eu/legal/"
+                    onClick={(evt) =>
+                      this.onLinkClick(evt, 'https://www.eea.europa.eu/legal/')
+                    }
+                  >
+                    Legal notice
+                  </a>
                 </p>
 
                 <p className="colophon-links">
@@ -343,6 +388,12 @@ class Footer extends Component {
                 <p className="colophon-links">
                   <a
                     href="https://www.eea.europa.eu/login_form"
+                    onClick={(evt) =>
+                      this.onLinkClick(
+                        evt,
+                        'https://www.eea.europa.eu/login_form',
+                      )
+                    }
                     title="Log in to CMS"
                   >
                     <strong>CMS login</strong>

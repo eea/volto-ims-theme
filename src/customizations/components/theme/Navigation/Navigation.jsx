@@ -100,6 +100,7 @@ class Navigation extends Component {
     super(props);
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
     this.closeMobileMenu = this.closeMobileMenu.bind(this);
+    this.onLinkClick = this.onLinkClick.bind(this);
     this.state = {
       isMobileMenuOpen: false,
       activeIndex: -1,
@@ -198,6 +199,17 @@ class Navigation extends Component {
   }
 
   /**
+   * Click an internal link
+   * @method onLinkClick
+   * @returns {undefined}
+   */
+  onLinkClick(evt, url) {
+    evt.preventDefault();
+    this.closeMobileMenu();
+    window.location = url;
+  }
+
+  /**
    * Render method.
    * @method render
    * @returns {string} Markup for the component.
@@ -261,7 +273,7 @@ class Navigation extends Component {
                     ? item.url === `/${lang}`
                     : item.url === ''
                 }
-                onClick={this.closeMobileMenu}
+                onClick={(evt) => this.onLinkClick(evt, item.url || '/')}
               >
                 {item.title}
               </NavLink>
@@ -286,7 +298,10 @@ class Navigation extends Component {
                       <List.Content>
                         <List.Description>
                           <a
-                            href={`https://www.eea.europa.eu/${language.code}`}
+                            href={`/${language.code}`}
+                            onClick={(evt) =>
+                              this.onLinkClick(evt, `/${language.code}`)
+                            }
                           >
                             {`${language.name} (${language.code})`}
                           </a>
@@ -316,7 +331,10 @@ class Navigation extends Component {
                         <List.Content>
                           <List.Description>
                             <a
-                              href={`https://www.eea.europa.eu/${language.code}`}
+                              href={`/${language.code}`}
+                              onClick={(evt) =>
+                                this.onLinkClick(evt, `/${language.code}`)
+                              }
                             >
                               {`${language.name} (${language.code})`}
                             </a>
