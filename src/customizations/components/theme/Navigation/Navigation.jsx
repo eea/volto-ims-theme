@@ -255,11 +255,7 @@ class Navigation extends Component {
           stackable
           pointing
           secondary
-          className={
-            this.state.isMobileMenuOpen
-              ? 'open'
-              : 'large screen widescreen only'
-          }
+          className={this.state.isMobileMenuOpen ? 'open' : 'large screen only'}
         >
           <div className="navigation-links">
             {this.props.items.map((item) => (
@@ -281,7 +277,6 @@ class Navigation extends Component {
           </div>
 
           <div className="tools-wrapper">
-            {/* <LanguagesWidget></LanguagesWidget> */}
             <Popup
               on="click"
               className="large screen only custom-search-pop"
@@ -348,15 +343,17 @@ class Navigation extends Component {
             </div>
 
             <div className="tools-search-wrapper">
+              <div className="search">
+                <SearchWidget pathname={this.props.pathname} />
+              </div>
+
               {!this.props.token && (
                 <div className="tools">
                   <Anontools handleClick={this.closeMobileMenu} />
                 </div>
               )}
-              <div className="search">
-                <SearchWidget pathname={this.props.pathname} />
-              </div>
             </div>
+
             <div>
               <a
                 href="https://europa.eu/european-union/about-eu_en"

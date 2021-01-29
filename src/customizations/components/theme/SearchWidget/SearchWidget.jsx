@@ -18,7 +18,7 @@ import {
   Icon,
   Input,
   List,
-  Popup,
+  Popup
 } from 'semantic-ui-react';
 
 const messages = defineMessages({
@@ -288,6 +288,24 @@ class SearchWidget extends Component {
               </button>
             </Form.Field>
           </Form>
+
+          <div
+            className="eea-search-links mobile tablet computer only clearfix"
+            style={{ color: 'white' }}
+          >
+            <a href="http://search.apps.eea.europa.eu" className="pull-left">
+              <span>Advanced search</span>
+            </a>
+            <a
+              className="pull-right"
+              href="https://www.eea.europa.eu/help/glossary"
+              onClick={(evt) =>
+                this.onLinkClick(evt, 'https://www.eea.europa.eu/help/glossary')
+              }
+            >
+              A-Z Glossary
+            </a>
+          </div>
         </div>
       </>
     );

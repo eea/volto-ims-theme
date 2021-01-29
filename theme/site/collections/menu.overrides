@@ -91,7 +91,7 @@
 
     .navigation-links {
       display: block !important;
-      margin-top: 4em;
+      margin-top: 6em;
     }
 
     .navigation-links a.item {

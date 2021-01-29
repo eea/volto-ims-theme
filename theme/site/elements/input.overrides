@@ -69,6 +69,16 @@
 	}
 }
 
+@media only screen and (max-width: @mobileWidth) {
+  .header-wrapper .ui.pointing.secondary.stackable.open.menu {
+		.eea-search-links {
+			a {
+				color: @white;
+			}
+		}
+	}
+}
+
 .clearfix:after {
   display: table;
   clear: both;
@@ -84,6 +94,19 @@
 
 .ui.form .searchbox.field {
   padding-left: 0.5em !important;
+}
+
+.searchbox {
+	.ui.accordion .title:not(.ui) {
+		padding: 0;
+	}
+	.ui.accordion:not(.styled) .title ~ .content.active {
+		position: absolute;
+		background: white;
+		width: 100%;
+		left: 0;
+		padding: 6px;
+	}
 }
 
 .ui.list > .item a.suggested-item {
