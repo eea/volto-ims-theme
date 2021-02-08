@@ -39,3 +39,49 @@
 .title.accordion-title.align-arrow-right {
   border-bottom: 1px solid #e0e0e0;
 }
+
+
+.columns-view {
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .ui.grid,
+    .ui.column.grid {
+      .two.wide.tablet.column,
+      .ten.wide.tablet.column,
+      .eight.wide.tablet.column,
+      .four.wide.tablet.column {
+        width: 100% !important;
+      }
+    }
+
+    .ui.grid,
+    .ui.column.grid {
+      .four.wide.tablet.column,
+      .six.wide.tablet.column {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+    .ui.grid > .column:not(.row):last-child,
+    .ui.grid > .row > .column:last-child,
+    .ui.grid > .column:not(.row):first-child,
+    .ui.grid > .row > .column:first-child {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  @media screen and (min-width: 767px) {
+    .ui.grid.column-grid {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .ui.grid > .column:not(.row):last-child,
+    .ui.grid > .row > .column:last-child {
+      padding-right: 0 !important;
+    }
+    .ui.grid > .column:not(.row):first-child,
+    .ui.grid > .row > .column:first-child {
+      padding-left: 0 !important;
+    }
+  }
+}
