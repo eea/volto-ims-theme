@@ -334,14 +334,13 @@ class Footer extends Component {
                 </p>
 
                 <p className="colophon-links">
-                  Software updated on
-                  <em> 23 November 2020 18:51 </em>
-                  from version <em>20.10.13</em>
-                </p>
-                <p className="colophon-links">
                   Software version:&nbsp;
+                  <a href="https://github.com/eea/ims-frontend/releases">
+                    EEA IMS Frontend
+                  </a>
+                  <span> / </span>
                   <a href="https://github.com/eea/eea.docker.kgs/releases">
-                    EEA Plone KGS 20.11.21
+                    EEA Plone KGS
                   </a>
                 </p>
 
