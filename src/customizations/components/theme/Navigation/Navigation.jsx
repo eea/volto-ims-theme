@@ -20,7 +20,7 @@ import {
   Image,
   List,
   Menu,
-  Popup
+  Popup,
 } from 'semantic-ui-react';
 import { settings } from '~/config';
 import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
@@ -343,15 +343,15 @@ class Navigation extends Component {
             </div>
 
             <div className="tools-search-wrapper">
-              <div className="search">
-                <SearchWidget pathname={this.props.pathname} />
-              </div>
-
               {!this.props.token && (
                 <div className="tools">
                   <Anontools handleClick={this.closeMobileMenu} />
                 </div>
               )}
+
+              <div className="search">
+                <SearchWidget pathname={this.props.pathname} />
+              </div>
             </div>
 
             <div>
