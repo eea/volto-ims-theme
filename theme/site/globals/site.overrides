@@ -1,4 +1,20 @@
 /*-------------------
+      CONTENT AREA
+--------------------*/
+
+#page-document > h1.documentFirstHeading {
+  position: relative;
+  border-bottom: none;
+  letter-spacing: -1px;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 600;
+  &:before {
+    border-bottom: none;
+  }
+}
+
+/*-------------------
       FOOTER
 --------------------*/
 
@@ -158,4 +174,85 @@ html {
 .eu-flag {
   width: 60px;
   height: 38px;
+}
+
+/*-------------------
+      PRINT RULES
+--------------------*/
+
+@media print {
+  .ui.basic.segment.header-wrapper,
+  .ui.secondary.vertical.segment.breadcrumbs,
+  #page-document > p.block.image.align.center:first-child,
+  .ui.content-area .ui.container.tags,
+  .ui.segment.footer-wrapper {
+    display: none;
+  }
+
+  #page-document {
+    margin-top: 6rem;
+    color: @black;
+    font-size: 14px;
+
+    h1 {
+      color: @printGrayTitle;
+      &:first-child {
+        margin-bottom: 6rem;
+      }
+    }
+    h2 {
+      color: @black;
+      font-size: 1.2rem;
+      border-top: 1px solid @black !important;
+      border-bottom: 1px solid @black !important;
+    }
+
+    h3 {
+      color: @printGrayDescription;
+      font-size: 1.5rem;
+      &:first-child {
+        margin-bottom: 6rem;
+      }
+    }
+
+    p > strong,
+    li > strong {
+      color: @black;
+    }
+
+    a,
+    a > strong {
+      font-size: 14px;
+      color: @pureBlack !important;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+  }
+
+  .ui.fluid.accordion {
+    .title.accordion-title.align-arrow-left,
+    .title.accordion-title.align-arrow-right {
+      font-size: 1rem;
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+    .active.title.accordion-title.align-arrow-left,
+    .active.title.accordion-title.align-arrow-right {
+      font-size: 1rem;
+      svg {
+        transform: none;
+      }
+    }
+    .content > .rah-static {
+      height: auto !important;
+      overflow: auto !important;
+    }
+    .content > .rah-static > div > div {
+      display: block !important;
+      opacity: 100% !important;
+    }
+  }
 }

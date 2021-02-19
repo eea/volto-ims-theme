@@ -1,0 +1,3 @@
+.ui.divider:not(.vertical):not(.horizontal) {
+  border-top: 3px solid #000 !important;
+}

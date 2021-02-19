@@ -25,6 +25,8 @@
 @lightGreen: #027572;
 @black: #333;
 @pureBlack: #000;
+@printGrayTitle: #ababab;
+@printGrayDescription: #bbbbbb;
 
 
 @mobileWidth: 1279px;
