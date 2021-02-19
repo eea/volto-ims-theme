@@ -2,15 +2,20 @@
       CONTENT AREA
 --------------------*/
 
-#page-document > h1.documentFirstHeading {
-  position: relative;
-  border-bottom: none;
-  letter-spacing: -1px;
-  font-size: 2.5rem;
-  line-height: 1.15;
-  font-weight: 600;
-  &:before {
+#page-document {
+  > h1.documentFirstHeading {
+    position: relative;
     border-bottom: none;
+    letter-spacing: -1px;
+    font-size: 2.5rem;
+    line-height: 1.15;
+    font-weight: 600;
+    &:before {
+      border-bottom: none;
+    }
+  }
+  > h3 {
+    font-size: 1.125rem;
   }
 }
 
@@ -190,26 +195,29 @@ html {
   }
 
   #page-document {
+    margin: 0 0.8rem !important;
     margin-top: 6rem;
     color: @black;
     font-size: 14px;
 
     h1 {
-      color: @printGrayTitle;
+      color: @lightPrint !important;
+      font-size: 1rem;
       &:first-child {
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
       }
     }
     h2 {
       color: @black;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       border-top: 1px solid @black !important;
       border-bottom: 1px solid @black !important;
     }
 
     h3 {
-      color: @printGrayDescription;
-      font-size: 1.5rem;
+      color: @lightPrint !important;
+      font-size: 1rem;
+      line-height: 1.5rem;
       &:first-child {
         margin-bottom: 6rem;
       }
@@ -231,9 +239,10 @@ html {
     }
   }
 
-  .ui.fluid.accordion {
+  .ui.accordion {
     .title.accordion-title.align-arrow-left,
     .title.accordion-title.align-arrow-right {
+      border-top: 1px solid #ddd !important;
       font-size: 1rem;
       svg {
         transform: rotate(90deg);
@@ -241,18 +250,22 @@ html {
     }
     .active.title.accordion-title.align-arrow-left,
     .active.title.accordion-title.align-arrow-right {
+      border-top: 1px solid #ddd !important;
       font-size: 1rem;
       svg {
         transform: none;
       }
     }
-    .content > .rah-static {
-      height: auto !important;
-      overflow: auto !important;
-    }
-    .content > .rah-static > div > div {
+    .content {
       display: block !important;
-      opacity: 100% !important;
+      > * {
+        height: auto !important;
+        margin-bottom: 0.5rem !important;
+      }
+      > * > * {
+        display: block !important;
+        opacity: 1 !important;
+      }
     }
   }
 }

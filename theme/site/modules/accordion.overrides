@@ -37,13 +37,13 @@
 
 .title.accordion-title.align-arrow-left,
 .title.accordion-title.align-arrow-right {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #ddd;
 }
 
 .ui.styled.accordion:first-child {
   .title.accordion-title.align-arrow-left,
   .title.accordion-title.align-arrow-right {
-    border-top: 1px solid #e0e0e0 !important;
+    border-top: 1px solid #ddd;
   }
 }
 
