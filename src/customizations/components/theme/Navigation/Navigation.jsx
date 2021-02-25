@@ -22,7 +22,7 @@ import {
   Menu,
   Popup,
 } from 'semantic-ui-react';
-import { settings } from '~/config';
+import config from '@plone/volto/registry';
 import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
 
 const messages = defineMessages({
@@ -148,7 +148,7 @@ class Navigation extends Component {
   UNSAFE_componentWillMount() {
     this.props.getNavigation(
       getBaseUrl(this.props.pathname),
-      settings.navDepth,
+      config.settings.navDepth,
     );
   }
 
@@ -162,7 +162,7 @@ class Navigation extends Component {
     if (nextProps.pathname !== this.props.pathname) {
       this.props.getNavigation(
         getBaseUrl(nextProps.pathname),
-        settings.navDepth,
+        config.settings.navDepth,
       );
     }
   }
@@ -265,7 +265,7 @@ class Navigation extends Component {
                 className="item"
                 activeClassName="active"
                 exact={
-                  settings.isMultilingual
+                  config.settings.isMultilingual
                     ? item.url === `/${lang}`
                     : item.url === ''
                 }
