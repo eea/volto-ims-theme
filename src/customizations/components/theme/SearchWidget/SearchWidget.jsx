@@ -18,7 +18,7 @@ import {
   Icon,
   Input,
   List,
-  Popup
+  Popup,
 } from 'semantic-ui-react';
 
 const messages = defineMessages({

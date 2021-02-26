@@ -31,7 +31,7 @@ Demo GIF
    ],
 
    "dependencies": {
-       "@eeacms/volto-ims-theme": "^1.0.0"
+       "@eeacms/volto-ims-theme": "^2.0.0"
    }
    ```
 

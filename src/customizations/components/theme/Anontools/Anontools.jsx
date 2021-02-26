@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Icon, Menu } from 'semantic-ui-react';
-import { settings } from '~/config';
+import config from '@plone/volto/registry';
 
 /**
  * Anontools container class.
@@ -57,7 +57,7 @@ class Anontools extends Component {
               to={`/login${
                 this.props.content
                   ? `?return_url=${this.props.content['@id'].replace(
-                      settings.apiPath,
+                      config.settings.apiPath,
                       '',
                     )}`
                   : ''
