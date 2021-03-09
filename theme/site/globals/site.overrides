@@ -268,4 +268,14 @@ html {
       }
     }
   }
+
+  .card {
+    display: flex;
+    > .card__face.card__face--back {
+      position: static;
+      overflow: hidden;
+      transform: none;
+      margin-top: 1rem;
+    }
+  }
 }
