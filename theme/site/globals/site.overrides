@@ -190,7 +190,8 @@ html {
   .ui.secondary.vertical.segment.breadcrumbs,
   #page-document > p.block.image.align.center:first-child,
   .ui.content-area .ui.container.tags,
-  .ui.segment.footer-wrapper {
+  .ui.segment.footer-wrapper,
+  .metadata-btn-group {
     display: none;
   }
 
