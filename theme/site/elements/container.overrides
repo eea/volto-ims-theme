@@ -50,3 +50,9 @@
     display: block !important;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .ui.container.pushable {
+    transform: unset;
+  }
+}

@@ -1,0 +1,12 @@
+@media only screen and (max-width: 768px) {
+  .ui.right.sidebar.metadata-sidebar.menu,
+  .ui.left.sidebar.metadata-sidebar.menu {
+    width: auto;
+    position: fixed;
+    top: 10rem;
+    max-height: 60vh !important;
+  }
+  .ui.left.sidebar.metadata-sidebar.menu {
+    right: 0;
+  }
+}

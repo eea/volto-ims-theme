@@ -58,3 +58,10 @@
     padding-top: 0 !important;
   }
 }
+
+.ui.right.sidebar.metadata-sidebar.menu,
+.ui.left.sidebar.metadata-sidebar.menu {
+  .ui.header {
+    padding: 0;
+  }
+}
