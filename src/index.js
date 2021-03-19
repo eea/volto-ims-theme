@@ -4,6 +4,8 @@ const applyConfig = (config) => {
     'www.eea.europa.eu',
   ];
 
+  // Restrict block-style to Layout only
+  config.settings.layoutOnlyBlockStyles = true;
   return config;
 };
 
