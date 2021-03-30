@@ -17,6 +17,22 @@
   > h3 {
     font-size: 1.125rem;
   }
+
+}
+
+/*-------------------
+      COMMENTS
+---------------------*/
+#comment-add-id {
+  .ui.raised.segments {
+    box-shadow: none;
+  }
+}
+
+.comment {
+  .ui.raised.segments {
+    box-shadow: none;
+  }
 }
 
 /*-------------------
@@ -191,7 +207,9 @@ html {
   #page-document > p.block.image.align.center:first-child,
   .ui.content-area .ui.container.tags,
   .ui.segment.footer-wrapper,
-  .metadata-btn-group {
+  .metadata-btn-group,
+  #comment-add-id,
+  .comments {
     display: none;
   }
 
