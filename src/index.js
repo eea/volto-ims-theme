@@ -6,6 +6,10 @@ const applyConfig = (config) => {
 
   // Restrict block-style to Layout only
   config.settings.layoutOnlyBlockStyles = true;
+
+  // Disable tags on View
+  config.settings.showTags = false;
+
   return config;
 };
 
