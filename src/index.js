@@ -10,6 +10,9 @@ const applyConfig = (config) => {
   // Disable tags on View
   config.settings.showTags = false;
 
+  // Enable Title block
+  config.blocks.blocksConfig.title.restricted = false;
+
   return config;
 };
 

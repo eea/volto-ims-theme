@@ -11,8 +11,10 @@ import PropTypes from 'prop-types';
  * @class View
  * @extends Component
  */
-const View = ({ properties }) => (
-  <h1 className="documentFirstHeading">{properties.title}</h1>
+const View = ({ metadata, properties }) => (
+  <h1 className="documentFirstHeading">
+    {metadata?.title || properties?.title}
+  </h1>
 );
 
 /**
@@ -21,6 +23,7 @@ const View = ({ properties }) => (
  * @static
  */
 View.propTypes = {
+  metadata: PropTypes.objectOf(PropTypes.any),
   properties: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 

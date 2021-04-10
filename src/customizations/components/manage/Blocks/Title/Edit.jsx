@@ -62,7 +62,10 @@ class Edit extends Component {
 
     if (!__SERVER__) {
       let editorState;
-      if (props.properties && props.properties.title) {
+      if (props.metadata && props.metadata.title) {
+        const contentState = stateFromHTML(props.metadata.title);
+        editorState = EditorState.createWithContent(contentState);
+      } else if (props.properties && props.properties.title) {
         const contentState = stateFromHTML(props.properties.title);
         editorState = EditorState.createWithContent(contentState);
       } else {
