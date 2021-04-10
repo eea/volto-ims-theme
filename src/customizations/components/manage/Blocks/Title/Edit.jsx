@@ -96,7 +96,7 @@ class Edit extends Component {
    * @memberof Edit
    */
   shouldComponentUpdate(nextProps) {
-    return this.props.selected || !isEqual(this.props.data, nextProps.data);
+    return true;
   }
   /**
    * Component will receive props
@@ -105,6 +105,19 @@ class Edit extends Component {
    * @returns {undefined}
    */
   UNSAFE_componentWillReceiveProps(nextProps) {
+    if (
+      nextProps?.metadata?.title &&
+      this.props.metadata?.title !== nextProps.metadata.title &&
+      !this.state.focus
+    ) {
+      const contentState = stateFromHTML(nextProps.metadata.title);
+      this.setState({
+        editorState: nextProps.metadata.title
+          ? EditorState.createWithContent(contentState)
+          : EditorState.createEmpty(),
+      });
+    }
+
     if (
       nextProps.properties.title &&
       this.props.properties.title !== nextProps.properties.title &&
