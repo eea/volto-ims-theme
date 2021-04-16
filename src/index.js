@@ -14,6 +14,7 @@ const applyConfig = (config) => {
 
   // Enable Title block
   config.blocks.blocksConfig.title.restricted = false;
+  config.blocks.requiredBlocks = [];
 
   // Custom block styles
   config.settings.pluggableStyles = [
