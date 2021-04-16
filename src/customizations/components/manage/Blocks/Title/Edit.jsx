@@ -7,7 +7,6 @@ import React, { Component } from 'react';
 import { Map } from 'immutable';
 import PropTypes from 'prop-types';
 import { stateFromHTML } from 'draft-js-import-html';
-import { isEqual } from 'lodash';
 import { Editor, DefaultDraftBlockRenderMap, EditorState } from 'draft-js';
 import { defineMessages, injectIntl } from 'react-intl';
 import config from '@plone/volto/registry';
