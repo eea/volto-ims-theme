@@ -1,4 +1,4 @@
-.transparent-black-box {
+.environment-theme-header {
     color: #FFF;
     position: relative;
     &::before {

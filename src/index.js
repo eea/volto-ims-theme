@@ -19,14 +19,24 @@ const applyConfig = (config) => {
   config.settings.pluggableStyles = [
     ...(config.settings.pluggableStyles || []),
     {
-      id: 'transparent-black-box',
-      title: 'Transparent black box',
-      cssClass: 'transparent-black-box',
-      previewComponent: (props) => (
-        <div className={`${props.className} transparent-black-box`}>
-          {props.children}
-        </div>
-      ),
+      id: 'environment-theme-bg',
+      title: 'Environment Theme Header',
+      viewComponent: (props) => {
+        const themes =
+          props?.metadata?.taxonomy_themes ||
+          props?.properties?.taxonomy_themes;
+        const theme = themes
+          ? `https://www.eea.europa.eu/themes/${themes[0]}/theme_image/image_panoramic`
+          : '';
+        return (
+          <div
+            className="environment-theme-bg"
+            style={{ backgroundImage: `url(${theme})` }}
+          >
+            <div className="environment-theme-header">{props.children}</div>
+          </div>
+        );
+      },
     },
   ];
 
