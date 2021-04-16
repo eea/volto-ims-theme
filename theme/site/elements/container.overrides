@@ -4,9 +4,6 @@
   body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed) .ui.container {
     width: 1400px !important;
     margin: 0 auto !important;
-    &.folder-contents {
-      margin-top: 20rem !important;
-    }
   }
 }
 

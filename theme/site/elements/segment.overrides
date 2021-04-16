@@ -47,10 +47,11 @@
     }
   }
 
-  #page-edit {
-    padding: 3rem;
-    margin-top: 100px !important;
+  #page-edit,
+  #page-add {
     position: relative;
+    padding: 3rem;
+    margin-top: 7.5rem;
 
     &::before {
       content: ' ';
@@ -59,9 +60,17 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #fff;
+      background-color: #fff;
       z-index: -1;
     }
+  }
+
+  #page-login,
+  .ui.container.folder-contents,
+  .view-wrapper {
+    padding-top: 2rem !important;
+    margin-top: -2rem !important;
+    background-color: #fff;
   }
 }
 
