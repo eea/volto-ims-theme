@@ -26,13 +26,14 @@ const applyConfig = (config) => {
         const themes =
           props?.metadata?.taxonomy_themes ||
           props?.properties?.taxonomy_themes;
-        const theme = themes
-          ? `https://www.eea.europa.eu/themes/${themes[0]}/theme_image/image_panoramic`
+        const theme = themes?.length ? themes[0]?.token || themes[0] : '';
+        const url = theme
+          ? `https://www.eea.europa.eu/themes/${theme}/theme_image/image_panoramic`
           : '';
         return (
           <div
-            className="environment-theme-bg"
-            style={{ backgroundImage: `url(${theme})` }}
+            className="full-width environment-theme-bg"
+            style={{ backgroundImage: `url(${url})` }}
           >
             <div className="environment-theme-header">{props.children}</div>
           </div>
