@@ -20,9 +20,12 @@ import config from '@plone/volto/registry';
 export function getVocabulary(vocabNameOrURL, query = null, start = 0) {
   const { settings } = config;
   // In case we have a URL, we have to get the vocabulary name
+  const apiPath = settings.apiPath.replace('/SITE', '');
   const vocabulary =
     vocabNameOrURL &&
-    vocabNameOrURL.replace(`${settings.apiPath}/@vocabularies/`, '');
+    vocabNameOrURL
+      .replace(`${settings.apiPath}/@vocabularies/`, '')
+      .replace(`${apiPath}/@vocabularies/`, '');
   let queryString = `b_start=${start}`;
   if (query) {
     queryString = `${queryString}&title=${query}`;
@@ -48,11 +51,11 @@ export function getVocabulary(vocabNameOrURL, query = null, start = 0) {
  */
 export function getVocabularyTokenTitle(vocabNameOrURL, token = null) {
   const { settings } = config;
+  const apiPath = settings.apiPath.replace('/SITE', '');
   // In case we have a URL, we have to get the vocabulary name
-  const vocabulary = vocabNameOrURL.replace(
-    `${settings.apiPath}/@vocabularies/`,
-    '',
-  );
+  const vocabulary = vocabNameOrURL
+    .replace(`${settings.apiPath}/@vocabularies/`, '')
+    .replace(`${apiPath}/@vocabularies/`, '');
 
   return {
     type: GET_VOCABULARY_TOKEN_TITLE,
