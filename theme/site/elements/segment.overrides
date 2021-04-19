@@ -66,11 +66,28 @@
   }
 
   #page-login,
-  .ui.container.folder-contents,
+  #page-contents,
+  #page-controlpanel-schema,
+  #page-controlpanel,
+  #page-addons,
+  #page-history,
+  #page-sharing,
+  .types-control-panel,
   .view-wrapper {
     padding-top: 2rem !important;
     margin-top: -2rem !important;
     background-color: #fff;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: -1;
+    }
   }
 }
 
