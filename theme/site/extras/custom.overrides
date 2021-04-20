@@ -1,27 +1,37 @@
 .environment-theme-bg {
-  margin-left: -50vw;
-  margin-right: -50vw;
   background-size: cover;
-  margin-top: -11.5rem;
-  padding-top: 10rem;
+  margin-top: -18rem;
+  position: absolute;
+  height: 50vh;
+  width: 100vw !important;
+
   @media only screen and (max-width: 1400px) {
-    margin-top: -13rem;
+    margin-top: -22rem;
   }
 }
 
 .environment-theme-header {
   color: #fff;
   position: relative;
-  max-width: 980px;
-  margin: auto;
+  max-width: 960px;
+  margin: 7rem auto !important;
   background-color: #000000b3;
-  padding: 3rem;
-  margin-bottom: 3rem;
+  padding: 2.5rem 4.5rem;
+
+  @media only screen and (max-width: 1400px) {
+    margin-top: -19rem;
+  }
 
   .documentFirstHeading {
     border-bottom: none;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 3.5rem !important;
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 2.2rem;
+    }
 
     &::before {
       border-bottom: none;
@@ -29,6 +39,7 @@
   }
 
   p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    line-height: 1.6;
   }
 }

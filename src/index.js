@@ -31,10 +31,11 @@ const applyConfig = (config) => {
           ? `https://www.eea.europa.eu/themes/${theme}/theme_image/image_panoramic`
           : '';
         return (
-          <div
-            className="full-width environment-theme-bg"
-            style={{ backgroundImage: `url(${url})` }}
-          >
+          <div>
+            <div
+              className="full-width environment-theme-bg"
+              style={{ backgroundImage: `url(${url})` }}
+            ></div>
             <div className="environment-theme-header">{props.children}</div>
           </div>
         );
