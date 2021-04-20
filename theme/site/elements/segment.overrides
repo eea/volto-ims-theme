@@ -10,6 +10,8 @@
 .ui.vertical.segment {
   border: 1px solid #ececec;
   padding: 8px 0;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .ui.basic.segment.content-area {

@@ -2,8 +2,11 @@
   margin-left: -50vw;
   margin-right: -50vw;
   background-size: cover;
-  margin-top: -11vw;
-  padding-top: 12vw;
+  margin-top: -11.5rem;
+  padding-top: 10rem;
+  @media only screen and (max-width: 1400px) {
+    margin-top: -13rem;
+  }
 }
 
 .environment-theme-header {
