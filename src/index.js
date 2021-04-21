@@ -31,7 +31,7 @@ const applyConfig = (config) => {
           ? `https://www.eea.europa.eu/themes/${theme}/theme_image/image_panoramic`
           : '';
         return (
-          <div>
+          <div className="container-environment-theme">
             <div
               className="full-width environment-theme-bg"
               style={{ backgroundImage: `url(${url})` }}

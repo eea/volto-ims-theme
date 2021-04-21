@@ -1,12 +1,17 @@
 .environment-theme-bg {
   background-size: cover;
-  margin-top: -18rem;
+  margin-top: -296px;
   position: absolute;
-  height: 50vh;
-  width: 100vw !important;
+  max-height: 464px;
+  height: 100%;
 
-  @media only screen and (max-width: 1400px) {
-    margin-top: -22rem;
+  @media only screen and (min-width: 768px) and (max-width: 1012px) {
+    max-height: 518px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-top: -260px;
+    max-height: 386px;
   }
 }
 
@@ -18,8 +23,13 @@
   background-color: #000000b3;
   padding: 2.5rem 4.5rem;
 
-  @media only screen and (max-width: 1400px) {
-    margin-top: -19rem;
+  @media only screen and (max-width: 768px) {
+    margin: -2.5rem auto !important;
+    padding: 1rem 1rem 1rem 2rem;
+    width: calc(100vw + 1px);
+    left: 52%;
+    -webkit-transform: translateX(-52%);
+    transform: translateX(-52%);
   }
 
   .documentFirstHeading {
@@ -27,10 +37,14 @@
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.15;
-    margin-bottom: 3.5rem !important;
+    margin: 0.5rem 0 3rem 0;
 
-    @media only screen and (max-width: 1200px) {
-      font-size: 2.2rem;
+    @media only screen and (min-width: 502px) and (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: 502px) {
+      font-size: 1.5rem;
     }
 
     &::before {
@@ -41,5 +55,18 @@
   p {
     font-size: 1.25rem;
     line-height: 1.6;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.section-edit {
+  .environment-theme-bg {
+  @media only screen and (min-width:768px) and (max-width: 1092px) {
+    max-height: 522px;
+    }
+  }
+  .documentFirstHeading {
+    margin-bottom: 3rem;
+    margin-top: -1rem;
   }
 }
