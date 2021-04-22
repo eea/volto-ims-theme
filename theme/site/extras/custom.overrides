@@ -4,8 +4,13 @@
   position: absolute;
   max-height: 464px;
   height: 100%;
+  width: 101vw !important;
 
-  @media only screen and (min-width: 768px) and (max-width: 1012px) {
+  @media only screen and (min-width: 859px) and (max-width: 1012px) {
+    max-height: 470px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 859px) {
     max-height: 518px;
   }
 
@@ -25,11 +30,11 @@
 
   @media only screen and (max-width: 768px) {
     margin: -2.5rem auto !important;
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 1rem 1.2rem 1rem 1rem;
     width: calc(100vw + 1px);
-    left: 52%;
-    -webkit-transform: translateX(-52%);
-    transform: translateX(-52%);
+    left: 51%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
   .documentFirstHeading {
@@ -59,14 +64,32 @@
   }
 }
 
+.is-authenticated,
+.section-edit {
+  .environment-theme-header {
+    @media only screen and (max-width: 768px) {
+      left: 50%;
+    }
+  }
+}
+
+.is-authenticated .environment-theme-bg {
+  @media only screen and (min-width: 859px) and (max-width: 939px) {
+    max-height: 518px !important;
+  }
+}
+
 .section-edit {
   .environment-theme-bg {
-  @media only screen and (min-width:768px) and (max-width: 1092px) {
-    max-height: 522px;
+    @media only screen and (min-width: 1031px) and (max-width: 1092px) {
+      max-height: 470px !important;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1031px) {
+      max-height: 522px !important;
     }
   }
   .documentFirstHeading {
-    margin-bottom: 3rem;
-    margin-top: -1rem;
+    margin-bottom: 3rem !important;
+    margin-top: -1rem !important;
   }
 }
