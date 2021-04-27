@@ -6,10 +6,11 @@
   > h1.documentFirstHeading {
     position: relative;
     border-bottom: none;
-    letter-spacing: -1px;
     font-size: 2.5rem;
-    line-height: 1.15;
     font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.15;
+
     &:before {
       border-bottom: none;
     }
@@ -17,6 +18,7 @@
       font-size: 2.2rem;
     }
   }
+
   > h3 {
     font-size: 1.125rem;
   }
@@ -68,23 +70,27 @@ html {
 
 .portal-footer {
   font-size: 12px;
+
   .colophon-section {
     &:not(:first-child) {
       border-top: 1px solid rgba(255, 255, 255, 0.23);
     }
   }
+
   .section-centered {
-    text-align: center;
-    padding: 1.125rem 0;
     width: 100%;
     flex-basis: 100%;
+    padding: 1.125rem 0;
+    text-align: center;
   }
+
   h2,
   p,
   div,
   a {
     color: @white !important;
   }
+
   h2 {
     font-weight: bold !important;
   }
@@ -99,34 +105,40 @@ html {
 .first-footer {
   .media-centered {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     font-size: 12px;
   }
+
   .social-media,
   .media {
     line-height: 1;
   }
+
   .social-media {
     display: flex;
     margin: 0 0.5em;
     @media screen and (max-width: 665px) {
       margin-bottom: 1em;
     }
+
     .link-plain.media i {
       font-size: 4em !important;
     }
   }
+
   .media {
     display: flex;
     align-items: center;
+
     i {
       font-size: 4em;
     }
+
     .media-body {
-      text-align: left;
       margin-left: 0.5em;
       line-height: 1.8;
+      text-align: left;
     }
   }
 
@@ -141,14 +153,16 @@ html {
     align-items: center;
     margin: 0 2em;
     line-height: 1;
+
     i {
-      font-size: 3em;
       margin-right: 0;
+      font-size: 3em;
     }
+
     span {
-      text-align: left;
       margin: 0 0 0 0.5em;
       line-height: 1.5;
+      text-align: left;
     }
   }
 }
@@ -157,6 +171,7 @@ html {
   a {
     color: @darkBlue;
     font-weight: bold;
+
     &:hover {
       color: @darkBlue;
     }
@@ -165,22 +180,25 @@ html {
   .colophon-section {
     padding: 1.125rem 0;
   }
+
   .europe-agency-text {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     color: @lightGrey;
-    font-weight: normal;
     font-size: 12px;
+    font-weight: normal;
+
     span {
       margin: 0 1em;
     }
   }
 
   .eea-software-info {
-    font-size: 11px;
     border-top: 1px solid rgba(0, 0, 0, 0.11);
+    font-size: 11px;
   }
+
   .colophon-links {
     display: inline-block;
     margin: 0 1em 0.75em;
@@ -188,6 +206,7 @@ html {
       width: 100%;
       text-align: center;
     }
+
     i.creative.commons {
       font-size: 12px;
     }
@@ -224,21 +243,24 @@ html {
     h1 {
       color: @lightPrint !important;
       font-size: 1rem;
+
       &:first-child {
         margin-bottom: 4rem;
       }
     }
+
     h2 {
-      color: @black;
-      font-size: 1.5rem;
       border-top: 1px solid @black !important;
       border-bottom: 1px solid @black !important;
+      color: @black;
+      font-size: 1.5rem;
     }
 
     h3 {
       color: @lightPrint !important;
       font-size: 1rem;
       line-height: 1.5rem;
+
       &:first-child {
         margin-bottom: 6rem;
       }
@@ -251,8 +273,8 @@ html {
 
     a,
     a > strong {
-      font-size: 14px;
       color: @pureBlack !important;
+      font-size: 14px;
     }
 
     ul {
@@ -265,24 +287,30 @@ html {
     .title.accordion-title.align-arrow-right {
       border-top: 1px solid #ddd !important;
       font-size: 1rem;
+
       svg {
         transform: rotate(90deg);
       }
     }
+
     .active.title.accordion-title.align-arrow-left,
     .active.title.accordion-title.align-arrow-right {
       border-top: 1px solid #ddd !important;
       font-size: 1rem;
+
       svg {
         transform: none;
       }
     }
+
     .content {
       display: block !important;
+
       > * {
         height: auto !important;
         margin-bottom: 0.5rem !important;
       }
+
       > * > * {
         display: block !important;
         opacity: 1 !important;
@@ -294,8 +322,8 @@ html {
     > .card__face.card__face--back {
       position: static;
       overflow: hidden;
-      transform: none;
       margin-top: 1rem;
+      transform: none;
     }
   }
 }

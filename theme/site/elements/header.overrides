@@ -5,14 +5,15 @@
 @media only screen and (max-width: @mobileWidth) {
   .ui.basic.segment.header-wrapper {
     position: sticky !important;
-    background: @white;
     z-index: 2;
+    background: @white;
   }
 
   .ui.segment {
     position: initial !important;
     top: 0;
   }
+
   .header .logo-nav-wrapper {
     margin: 10px 0 10px;
   }
@@ -21,14 +22,17 @@
 .ui.basic.segment.header-wrapper {
   padding: 0;
 }
+
 .ui.basic.segment .header {
   padding: 0 15px;
 }
+
 .header .logo-nav-wrapper {
   align-items: center;
+
   .navigation {
-    width: 100%;
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
   }
@@ -36,24 +40,27 @@
 
 .header .logo-nav-wrapper .ui.pointing.secondary {
   display: flex;
-  justify-content: unset;
-  max-width: 100%;
   width: 100%;
+  max-width: 100%;
+  justify-content: unset;
   margin: 0 !important;
 
   .navigation-links {
     display: inline-flex;
-    justify-content: center;
     width: 100%;
+    justify-content: center;
   }
+
   .tools-wrapper {
     display: flex;
-    align-items: center;
     flex: 1 0 auto;
+    align-items: center;
   }
+
   .tools-search-wrapper {
     margin-left: 0;
   }
+
   .search form {
     padding-top: 0 !important;
   }

@@ -3,10 +3,10 @@
 --------------------*/
 
 .eea-logo {
-  display: block;
-  height: 40px;
-  min-width: 209px;
   top: -0.2px;
+  display: block;
+  min-width: 209px;
+  height: 40px;
 }
 
 #page-document > p.block.image.align.center:first-child {

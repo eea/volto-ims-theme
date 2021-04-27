@@ -4,51 +4,58 @@
 
 .first-footer {
   .ui.table {
-    font-size: 1em;
-    background: none !important;
-    border: none !important;
-    border-collapse: collapse !important;
-    max-width: 100% !important;
     width: auto;
+    max-width: 100% !important;
+    border: none !important;
+    background: none !important;
+    border-collapse: collapse !important;
+    font-size: 1em;
+
     tr td {
-      border-top: none !important;
       padding: 0.2em;
+      border-top: none !important;
     }
     @media only screen and (max-width: 860px) {
       &:not(.unstackable) .table-link-description {
         font-weight: normal !important;
       }
+
       &:not(.unstackable) tr {
-        box-shadow: none !important;
         padding: 0em !important;
+        box-shadow: none !important;
       }
+
       &:not(.unstackable) tr td {
         padding: 0em !important;
       }
+
       &:not(.unstackable) tr td.table-link-description {
         margin-bottom: 1em !important;
       }
+
       &:not(.unstackable) tr.right-row {
         display: flex !important;
         flex-direction: column;
       }
     }
+
     &:first-child,
     &:last-child {
       margin: 0em !important;
     }
   }
+
   .ui.grid {
     margin: 0 !important;
   }
 
   .two-tables {
     display: flex;
+    max-width: 1500px;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 auto;
-    max-width: 1500px;
     justify-content: space-around;
+    margin: 0 auto;
     font-size: 12px;
     @media only screen and (max-width: 603px) {
       flex-direction: column;
@@ -61,11 +68,12 @@
     .table-link-title,
     .table-link-description {
       @media only screen and (max-width: 860px) {
-        text-align: center !important;
-        width: 100%;
         display: block;
+        width: 100%;
+        text-align: center !important;
       }
     }
+
     .table-link-title {
       font-weight: bold;
     }
@@ -74,6 +82,7 @@
   .left-table .table-link-title {
     text-align: right;
   }
+
   .left-table .table-link-description {
     @media screen and (min-width: 860px) {
       padding-left: 1em !important;
