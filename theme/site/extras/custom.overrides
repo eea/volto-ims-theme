@@ -24,6 +24,7 @@
   position: relative;
   max-width: 960px;
   padding: 2.5rem 4.5rem;
+  padding-bottom: 0;
   margin: 7rem auto !important;
   background-color: #000000b3;
   color: #fff;
