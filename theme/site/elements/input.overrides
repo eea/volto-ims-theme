@@ -8,9 +8,11 @@
 
 .ui.form .searchbox.field {
   border-left: none;
+
   button {
     color: @darkGrey;
   }
+
   .ui.input input {
     width: 4.5em;
   }
@@ -46,50 +48,53 @@
 }
 
 .ui.search-custom-eea {
-	justify-content: center;
-	width: 70px;
-	&,
-	&:hover {
-		background: @darkBlue;
-		color: white;
-	}
+  width: 70px;
+  justify-content: center;
+
+  &,
+  &:hover {
+    background: @darkBlue;
+    color: white;
+  }
 }
 
 .eea-search-links {
-	a {
-    color: #004B87;
+  a {
+    color: #004b87;
+    font-size: 12px;
     font-weight: normal;
-		font-size: 12px;
-	}
-	.pull-right {
-		float: right;
-	}
-	.pull-left {
-		float: left;
-	}
+  }
+
+  .pull-right {
+    float: right;
+  }
+
+  .pull-left {
+    float: left;
+  }
 }
 
 @media only screen and (max-width: @mobileWidth) {
   .header-wrapper .ui.pointing.secondary.stackable.open.menu {
-		.eea-search-links {
-			a {
-				color: @white;
-			}
-		}
-	}
+    .eea-search-links {
+      a {
+        color: @white;
+      }
+    }
+  }
 }
 
 .clearfix:after {
   display: table;
   clear: both;
-  content: "";
+  content: '';
 }
 
 .custom-search-pop {
-	.ui.mini.input > input{
-		font-size: 16px;
+  .ui.mini.input > input {
     padding: 0 5px;
-	}
+    font-size: 16px;
+  }
 }
 
 .ui.form .searchbox.field {
@@ -97,107 +102,111 @@
 }
 
 .searchbox {
-	.ui.accordion .title:not(.ui) {
-		padding: 0;
-	}
-	.ui.accordion:not(.styled) .title ~ .content.active {
-		position: absolute;
-		background: white;
-		width: 100%;
-		left: 0;
-		padding: 6px;
-	}
+  .ui.accordion .title:not(.ui) {
+    padding: 0;
+  }
+
+  .ui.accordion:not(.styled) .title ~ .content.active {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 6px;
+    background: white;
+  }
 }
 
 .ui.list > .item a.suggested-item {
-	font-size: 16px;
-	color: black;
+  color: black;
+  font-size: 16px;
 }
 
 .languages-list {
-	ul&.ui.list li:before, 
-	&.ui.bulleted.list .list > .item:before,
-	&.ui.bulleted.list > .item:before {
-		content: '▪';
-		color: @blue;
-	}
-	&.ui.list > .item a,
-	&.ui.list .list > .item a {
-		cursor: pointer;
-		line-height: normal;
-		font-size: .7rem;
+  ul&.ui.list li:before,
+  &.ui.bulleted.list .list > .item:before,
+  &.ui.bulleted.list > .item:before {
+    color: @blue;
+    content: '▪';
+  }
 
-		@media only screen and (max-width: @mobileWidth) {
-			font-size: .9rem;
-		}
-	}
+  &.ui.list > .item a,
+  &.ui.list .list > .item a {
+    cursor: pointer;
+    font-size: 0.7rem;
+    line-height: normal;
 
-	@media only screen and (max-width: @mobileWidth) {
-		.navigation .ui.secondary.pointing.menu & .item {
-			padding: 0;
-			margin: 0;
-		}
-		.ui.styled.accordion & .content {
-			padding: 0;
-		}
-	}
+    @media only screen and (max-width: @mobileWidth) {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: @mobileWidth) {
+    .navigation .ui.secondary.pointing.menu & .item {
+      padding: 0;
+      margin: 0;
+    }
+
+    .ui.styled.accordion & .content {
+      padding: 0;
+    }
+  }
 }
 
 .navigation,
 .tools {
-	.ui.secondary.pointing.menu {
-		border: 0;
-		margin: 0 0 0 40px;
+  .ui.secondary.pointing.menu {
+    border: 0;
+    margin: 0 0 0 40px;
 
-		@media only screen and (max-width: @largestTabletScreen) {
-			margin-bottom: 20px;
-			margin-left: 0;
-		}
+    @media only screen and (max-width: @largestTabletScreen) {
+      margin-bottom: 20px;
+      margin-left: 0;
+    }
 
-		.item {
-			padding-top: 0;
-			margin: 0;
-			text-transform: none;
+    .item {
+      padding-top: 0;
+      margin: 0;
+      text-transform: none;
 
-			@media only screen and (min-width: @largestTabletScreen) {
-				padding: 0;
-				margin: 0;
-			}
-		}
-	}
+      @media only screen and (min-width: @largestTabletScreen) {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
 }
 
 .suggested-list {
-	a {
-		color: black;
-		font-size: .8rem
-	}
+  a {
+    color: black;
+    font-size: 0.8rem;
+  }
 }
 
 .languages-list-mobile {
-	padding: 0;
+  padding: 0;
 }
 
 #button {
+  position: fixed;
+  z-index: 70;
+  right: 30px;
+  bottom: 30px;
   display: inline-block;
-  background-color: @green;
   width: 50px;
   height: 50px;
-  text-align: center;
+  border: none;
+  background-color: @green;
   border-radius: 4px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
-  z-index: 70;
-	border: none;
-	color: white;
+  color: white;
+  text-align: center;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
 }
+
 #button:hover {
-  cursor: pointer;
   background-color: @lightGreen;
+  cursor: pointer;
 }
+
 #button:active {
   background-color: @lightGreen;
 }

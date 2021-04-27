@@ -12,8 +12,8 @@
     .ui.container,
   body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed) .ui.container {
     width: 100% !important;
-    margin: 0 auto !important;
     padding: 0 15px !important;
+    margin: 0 auto !important;
   }
 }
 

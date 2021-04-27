@@ -1,10 +1,10 @@
 .environment-theme-bg {
-  background-size: cover;
-  margin-top: -296px;
   position: absolute;
-  max-height: 464px;
-  height: 100%;
   width: 101vw !important;
+  height: 100%;
+  max-height: 464px;
+  margin-top: -296px;
+  background-size: cover;
 
   @media only screen and (min-width: 859px) and (max-width: 1012px) {
     max-height: 470px;
@@ -15,34 +15,66 @@
   }
 
   @media only screen and (max-width: 768px) {
-    margin-top: -260px;
     max-height: 386px;
+    margin-top: -260px;
   }
 }
 
 .environment-theme-header {
-  color: #fff;
   position: relative;
   max-width: 960px;
+  padding: 2.5rem 4.5rem;
+  padding-bottom: 0;
   margin: 7rem auto !important;
   background-color: #000000b3;
-  padding: 2.5rem 4.5rem;
+  color: #fff;
+
+  .block.group.selected::before,
+  .block.group:hover::before {
+    border-style: dashed;
+  }
+
+  .ui.divider:not(.vertical):not(.horizontal) {
+    border-top: 2px solid #fff !important;
+  }
+
+  .block .block.selected::before,
+  .block .block.selected:hover::before {
+    z-index: 0;
+  }
+
+  .block-editor-group {
+    .block-toolbar {
+      border-bottom: none;
+      background: none;
+
+      button {
+        color: #fff !important;
+      }
+    }
+
+    fieldset {
+      legend {
+        background-color: #000000b3;
+      }
+    }
+  }
 
   @media only screen and (max-width: 768px) {
-    margin: -2.5rem auto !important;
-    padding: 1rem 1.2rem 1rem 1rem;
-    width: calc(100vw + 1px);
     left: 51%;
+    width: calc(100vw + 1px);
+    padding: 1rem 1.2rem 1rem 1rem;
+    margin: -2.5rem auto !important;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 
   .documentFirstHeading {
     border-bottom: none;
+    margin: 0.5rem 0 3rem 0;
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.15;
-    margin: 0.5rem 0 3rem 0;
 
     @media only screen and (min-width: 502px) and (max-width: 768px) {
       font-size: 1.8rem;
@@ -60,7 +92,6 @@
   p {
     font-size: 1.25rem;
     line-height: 1.6;
-    padding-bottom: 1.5rem;
   }
 }
 
@@ -88,8 +119,9 @@
       max-height: 522px !important;
     }
   }
+
   .documentFirstHeading {
-    margin-bottom: 3rem !important;
     margin-top: -1rem !important;
+    margin-bottom: 3rem !important;
   }
 }

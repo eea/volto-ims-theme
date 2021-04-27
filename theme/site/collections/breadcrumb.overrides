@@ -3,28 +3,32 @@
 --------------------*/
 
 .ui.breadcrumb {
-  font-size: 12px !important;
   padding: 0 15px;
+  font-size: 12px !important;
 
   a,
   a:hover {
     color: @lightBlue;
   }
+
   i.home.icon {
     font-size: 13px !important;
   }
+
   .icon.divider {
-    font-size: 17px;
-    color: @lighterGray;
     margin: 0 5px 0 2px;
+    color: @lighterGray;
+    font-size: 17px;
   }
+
   .active.section {
     color: @black !important;
   }
+
   .section {
-    max-width: 220px;
     overflow: hidden;
-    white-space: nowrap;
+    max-width: 220px;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
