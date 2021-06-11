@@ -2,10 +2,13 @@
        Fonts
 --------------------*/
 
-@fontName: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+@fontName: "Open Sans";
 
-@googleFontName    : @fontName;
-@importGoogleFonts : true;
+@pageFont          : @fontName, Verdana, Helvetica, Arial, sans-serif;
+
+@themeFontPath     : "../assets/fonts";
+@googleFontName    : 'Open Sans';
+@importGoogleFonts : false;
 @googleFontSizes   : '200,300,400,500,600,700,400italic,700italic';
 
 /*-------------------

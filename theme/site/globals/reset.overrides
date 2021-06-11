@@ -1,0 +1,29 @@
+.setFontSrc(@fontName, @fontWeight: 'Regular', @fontType: 'woff', @fontFormat: 'woff') {
+  src: url('@{themeFontPath}/@{fontName}/@{fontName}-@{fontWeight}.@{fontType}')
+  format('@{fontFormat}');
+}
+/*-------------------
+       Fonts
+--------------------*/
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  .setFontSrc(@fontName:'OpenSans', @fontWeight: 'Light');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  .setFontSrc(@fontName:'OpenSans');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: bold;
+  .setFontSrc(@fontName:'OpenSans', @fontWeight: 'Bold');
+}
