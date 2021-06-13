@@ -112,6 +112,8 @@
 
 .section-edit {
   .environment-theme-bg {
+    margin-top: -275px;
+
     @media only screen and (min-width: 1031px) and (max-width: 1092px) {
       max-height: 470px !important;
     }
