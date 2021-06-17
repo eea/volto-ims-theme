@@ -70,6 +70,16 @@ class Breadcrumbs extends Component {
   }
 
   /**
+   * Click an internal link
+   * @method onLinkClick
+   * @returns {undefined}
+   */
+  onLinkClick(evt, url) {
+    evt.preventDefault();
+    window.location = url;
+  }
+
+  /**
    * Render method.
    * @method render
    * @returns {string} Markup for the component.
@@ -89,6 +99,7 @@ class Breadcrumbs extends Component {
               to="/"
               className="section"
               title={this.props.intl.formatMessage(messages.home)}
+              onClick={(evt) => this.onLinkClick(evt, '/')}
             >
               <Icon name="home" />
             </Link>
