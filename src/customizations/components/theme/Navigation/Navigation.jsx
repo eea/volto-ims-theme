@@ -24,6 +24,7 @@ import {
 } from 'semantic-ui-react';
 import config from '@plone/volto/registry';
 import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
+import throttle from 'lodash.throttle';
 
 const messages = defineMessages({
   closeMobileMenu: {
@@ -110,9 +111,10 @@ class Navigation extends Component {
 
   componentDidMount() {
     var scrollComponent = this;
-    document.addEventListener('scroll', function (e) {
-      scrollComponent.toggleVisibility();
-    });
+    document.addEventListener(
+      'scroll',
+      throttle(() => scrollComponent.toggleVisibility(), 500),
+    );
   }
 
   /**
@@ -258,23 +260,6 @@ class Navigation extends Component {
           className={this.state.isMobileMenuOpen ? 'open' : 'large screen only'}
         >
           <div className="navigation-links">
-            <NavLink
-              to="/ims"
-              key="/ims"
-              className="item"
-              activeClassName="active"
-            >
-              IMS
-              <sup
-                style={{
-                  color: 'red',
-                  fontSize: '65%',
-                  transform: 'rotate(0deg)',
-                }}
-              >
-                BETA
-              </sup>
-            </NavLink>
             {this.props.items.map((item) => (
               <NavLink
                 to={item.url === '' ? '/' : item.url}
