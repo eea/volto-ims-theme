@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-ims-theme",
-  "version": "2.7.6",
+  "version": "2.8.0",
   "description": "volto-ims-theme: Volto Theme: EEA IMS",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",
@@ -20,7 +20,7 @@
     "@eeacms/volto-corsproxy"
   ],
   "dependencies": {
-    "@eeacms/volto-corsproxy": ">=2.1.2"
+    "@eeacms/volto-corsproxy": "*"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",

@@ -58,6 +58,18 @@
         background-color: #000000b3;
       }
     }
+
+    .counter {
+      &.info {
+        color: gray;
+      }
+      &.warning {
+        color: orange;
+      }
+      &.danger {
+        color: pink;
+      }
+    }
   }
 
   @media only screen and (max-width: 768px) {
