@@ -260,6 +260,23 @@ class Navigation extends Component {
           className={this.state.isMobileMenuOpen ? 'open' : 'large screen only'}
         >
           <div className="navigation-links">
+            <NavLink
+              to="/ims"
+              key="/ims"
+              className="item"
+              activeClassName="active"
+            >
+              IMS
+              <sup
+                style={{
+                  color: 'red',
+                  fontSize: '65%',
+                  transform: 'rotate(0deg)',
+                }}
+              >
+                BETA
+              </sup>
+            </NavLink>
             {this.props.items.map((item) => (
               <NavLink
                 to={item.url === '' ? '/' : item.url}
