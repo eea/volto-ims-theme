@@ -3,9 +3,8 @@
  */
 
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Redirect } from 'react-router-dom';
 import { getBaseUrl } from '@plone/volto/helpers';
-import { Redirect } from "react-router-dom";
 
 /**
  * unauthorized function.
@@ -15,7 +14,11 @@ import { Redirect } from "react-router-dom";
 const Unauthorized = () => {
   let location = useLocation();
   return (
-    <Redirect to={`${getBaseUrl(location.pathname)}/login?return_url=${location.pathname}`}/>
+    <Redirect
+      to={`${getBaseUrl(location.pathname)}/login?return_url=${
+        location.pathname
+      }`}
+    />
   );
 };
 

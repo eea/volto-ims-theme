@@ -35,10 +35,7 @@ const NotFound = () => (
         values={{
           contact_us: (
             <Link to="/contact-us">
-              <FormattedMessage
-                id="Contact Us"
-                defaultMessage="contact us"
-              />
+              <FormattedMessage id="Contact Us" defaultMessage="contact us" />
             </Link>
           ),
         }}
