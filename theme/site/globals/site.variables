@@ -28,7 +28,7 @@
 @lightGreen: #027572;
 @black: #333;
 @pureBlack: #000;
-@lightPrint: #F2F2F2;
+@grayPrint: #bbb;
 
 /*-------------------
       Responsive

@@ -218,6 +218,7 @@ html {
   height: 38px;
 }
 
+
 /*-------------------
       PRINT RULES
 --------------------*/
@@ -230,23 +231,29 @@ html {
   .ui.segment.footer-wrapper,
   .metadata-btn-group,
   #comment-add-id,
-  .comments {
+  .comments,
+  .card > .card__face.card__face--back {
     display: none;
   }
 
   #page-document {
-    margin: 0 0.8rem !important;
-    margin-top: 6rem;
+    margin: 6rem 0 0 0 !important;
     color: @black;
     font-size: 14px;
 
     h1 {
-      color: @lightPrint !important;
-      font-size: 1rem;
+      font-size: 2rem !important;
+      color: @grayPrint !important;
 
       &:first-child {
         margin-bottom: 4rem;
       }
+    }
+
+    h1.documentFirstHeading + p {
+        color: @grayPrint !important;
+        font-size: 1rem;
+        line-height: 1.7rem;
     }
 
     h2 {
@@ -257,7 +264,7 @@ html {
     }
 
     h3 {
-      color: @lightPrint !important;
+      color: @grayPrint !important;
       font-size: 1rem;
       line-height: 1.5rem;
 
@@ -318,12 +325,4 @@ html {
     }
   }
 
-  .card {
-    > .card__face.card__face--back {
-      position: static;
-      overflow: hidden;
-      margin-top: 1rem;
-      transform: none;
-    }
-  }
 }
