@@ -21,11 +21,11 @@ const FileView = ({ content }) => (
       {content.title}
       {content.subtitle && ` - ${content.subtitle}`}
     </h1>
-    {(content.description && typeof content.description === 'object') && (
+    {content.description && typeof content.description === 'object' && (
       <p className="documentDescription">{content.description.data}</p>
     )}
 
-    {(content.description && typeof content.description !== 'object') && (
+    {content.description && typeof content.description !== 'object' && (
       <p className="documentDescription">{content.description}</p>
     )}
     {content.file?.download && (
