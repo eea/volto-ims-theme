@@ -6,7 +6,7 @@ const CustomCSS = (props) => {
   return (
     <link
       rel={'stylesheet'}
-      href={`${config.settings.apiPath}/ploneCustom.css`}
+      href={`${config.settings.apiPath}/voltoCustom.css`}
     />
   );
 };
