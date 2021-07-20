@@ -1,0 +1,6 @@
+.my-half {
+  margin: 0 .5rem !important;
+}
+.my-1 {
+  margin: 0 1rem !important;
+}
