@@ -23,12 +23,23 @@ const Unauthorized = () => {
   const base_pathname = getBaseUrl(pathname);
   const login = `${base_pathname}/login`;
   const history = useHistory();
+  const [countdown, setCountdown] = React.useState(5);
+
   useEffect(() => {
     const login_with_return = login + `?return_url=${pathname}`;
     setTimeout(() => {
       return history.push(login_with_return);
-    }, 10000);
+    }, 5000);
   }, [history, login, pathname]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCountdown(countdown - 1);
+    }, 1000);
+    // Clear timeout if the component is unmounted
+    return () => clearTimeout(timer);
+  }, [countdown]);
+
   return (
     <Container className="view-wrapper">
       <h1>
@@ -36,10 +47,10 @@ const Unauthorized = () => {
       </h1>
       <h3>
         <FormattedMessage
-          id="Forbidden, you will be redirected to the login screen in 10 seconds"
-          defaultMessage="Forbidden, you will be redirected to the login screen in 10 seconds"
+          id="Forbidden, you will be redirected to the login screen in "
+          defaultMessage="Forbidden, you will be redirected to the login screen in "
         />
-        .
+        <span id="redirect-countdown">{countdown}</span>.
       </h3>
 
       <p className="description">
