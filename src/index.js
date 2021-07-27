@@ -8,6 +8,11 @@ const applyConfig = (config) => {
     'www.eea.europa.eu',
   ];
 
+  // ensure scripts load on error pages
+  if (__SERVER__) {
+    config.settings.serverConfig.extractScripts.errorPages = true;
+  }
+
   // Custom block styles
   config.settings.pluggableStyles = [
     ...(config.settings.pluggableStyles || []),
