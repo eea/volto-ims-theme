@@ -159,7 +159,7 @@
     }
   }
 
-  .search {
+  .tools-search-wrapper .search {
     position: absolute;
     top: 18px;
     left: 14px;
