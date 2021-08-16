@@ -236,6 +236,15 @@ html {
     display: none;
   }
 
+  .card.is-flipped > .card__face.card__face--front {
+    display: none;
+  }
+
+  .card.is-flipped > .card__face.card__face--back {
+    display: block;
+    position: relative;
+  }
+
   #page-document {
     margin: 6rem 0 0 0 !important;
     padding-right: 2rem;
