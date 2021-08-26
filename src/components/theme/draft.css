@@ -1,0 +1,3 @@
+#page-document:not(.wf-state-published) {
+  background-image: url('draft.png') !important;
+}

@@ -1,3 +1,5 @@
 import CustomCSS from './theme/CustomCSS';
+import DraftBackground from './theme/DraftBackground';
 
-export default CustomCSS;
+export { CustomCSS, DraftBackground };
+
