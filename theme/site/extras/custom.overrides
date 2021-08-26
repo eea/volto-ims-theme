@@ -65,9 +65,11 @@
       &.info {
         color: gray;
       }
+
       &.warning {
         color: orange;
       }
+
       &.danger {
         color: pink;
       }
