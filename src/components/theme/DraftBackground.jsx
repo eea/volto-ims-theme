@@ -1,18 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './draft.css';
+import { BodyClass } from '@plone/volto/helpers';
 
-const DraftBackground = ({ content }) => {
-  React.useEffect(() => {
-    const pageDocument = document.getElementById('page-document');
-    if (pageDocument) {
-      pageDocument.className += ` wf-state-${content.review_state}`;
-    }
-  }, [content.review_state]);
-
-  return null;
+const DraftBackground = ({ review_state }) => {
+  const draftClass = `wf-state-${review_state}`;
+  return  <BodyClass className= {draftClass} />;
 };
 
 export default connect((state) => ({
-  content: state.content.data,
+  review_state: state.content.data?.review_state,
 }))(DraftBackground);
