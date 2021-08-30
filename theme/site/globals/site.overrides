@@ -218,7 +218,6 @@ html {
   height: 38px;
 }
 
-
 /*-------------------
       PRINT RULES
 --------------------*/
@@ -241,20 +240,20 @@ html {
   }
 
   .card.is-flipped > .card__face.card__face--back {
-    display: block;
     position: relative;
+    display: block;
   }
 
   #page-document {
-    margin: 6rem 0 0 0 !important;
     padding-right: 2rem;
     padding-left: 2rem;
+    margin: 6rem 0 0 0 !important;
     color: @black;
     font-size: 14px;
 
     h1 {
-      font-size: 2rem !important;
       color: @grayPrint !important;
+      font-size: 2rem !important;
 
       &:first-child {
         margin-bottom: 4rem;
@@ -262,9 +261,9 @@ html {
     }
 
     h1.documentFirstHeading + p {
-        color: @grayPrint !important;
-        font-size: 1rem;
-        line-height: 1.7rem;
+      color: @grayPrint !important;
+      font-size: 1rem;
+      line-height: 1.7rem;
     }
 
     h2 {
@@ -335,5 +334,4 @@ html {
       }
     }
   }
-
 }

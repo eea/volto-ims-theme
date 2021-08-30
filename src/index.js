@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomCSS from './components';
+import { CustomCSS, DraftBackground } from './components';
 
 const applyConfig = (config) => {
   // CORS Allowed Destinations
@@ -47,6 +47,10 @@ const applyConfig = (config) => {
     {
       match: '',
       component: CustomCSS,
+    },
+    {
+      match: '',
+      component: DraftBackground,
     },
   ];
 
