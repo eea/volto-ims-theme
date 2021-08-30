@@ -1,6 +1,6 @@
 {
   "name": "@eeacms/volto-ims-theme",
-  "version": "2.8.6",
+  "version": "2.9.0",
   "description": "volto-ims-theme: Volto Theme: EEA IMS",
   "main": "src/index.js",
   "author": "European Environment Agency: IDM2 A-Team",

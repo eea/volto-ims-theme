@@ -1,6 +1,6 @@
 .setFontSrc(@fontName, @fontWeight: 'Regular', @fontType: 'woff', @fontFormat: 'woff') {
   src: url('@{themeFontPath}/@{fontName}/@{fontName}-@{fontWeight}.@{fontType}')
-  format('@{fontFormat}');
+    format('@{fontFormat}');
 }
 /*-------------------
        Fonts
