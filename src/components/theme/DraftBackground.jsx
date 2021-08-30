@@ -5,7 +5,7 @@ import { BodyClass } from '@plone/volto/helpers';
 
 const DraftBackground = ({ review_state }) => {
   const draftClass = `wf-state-${review_state}`;
-  return  <BodyClass className= {draftClass} />;
+  return <BodyClass className={draftClass} />;
 };
 
 export default connect((state) => ({
