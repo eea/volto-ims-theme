@@ -1,8 +1,6 @@
-.accordion-block .content.active {
-  @media (min-width: 1024px) {
-    padding: 1rem 2rem !important;
-    border-bottom: 1px solid #ddd;
-  }
+#view .accordion-block .content.active {
+  padding: 1rem 2rem !important;
+  border-bottom: 1px solid #ddd;
 
   .ui.table {
     border: none;
