@@ -1,0 +1,3 @@
+.ui.modal .react-select__menu-list {
+  overflow: hidden !important;
+}

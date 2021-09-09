@@ -1,7 +1,7 @@
 @import 'utils.overrides';
 
 .environment-theme-bg {
-  position: absolute;
+  position: absolute !important;
   width: 101vw !important;
   height: 100%;
   max-height: 464px;
