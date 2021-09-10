@@ -1,5 +1,10 @@
 import React from 'react';
-import { CustomCSS, DraftBackground } from './components';
+import {
+  CustomCSS,
+  DraftBackground,
+  TokenWidget,
+  ThemesWidget,
+} from './components';
 
 const applyConfig = (config) => {
   // CORS Allowed Destinations
@@ -7,6 +12,16 @@ const applyConfig = (config) => {
     ...(config.settings.allowed_cors_destinations || []),
     'www.eea.europa.eu',
   ];
+
+  // Custom widgets view
+  if (config.widgets.views?.id) {
+    config.widgets.views.id.subjects = TokenWidget;
+    config.widgets.views.id.taxonomy_themes = ThemesWidget;
+  }
+
+  if (config.widgets.views?.widget) {
+    config.widgets.views.widget.tags = TokenWidget;
+  }
 
   // ensure scripts load on error pages
   if (__SERVER__) {
