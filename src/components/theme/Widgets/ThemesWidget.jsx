@@ -8,7 +8,7 @@ export const ThemesWidget = ({ value, children, className }) =>
         <a
           className="ui label"
           href={`https://www.eea.europa.eu/themes/${tag.token}`}
-          key={tag}
+          key={tag.token}
         >
           {children ? children(tag) : tag.title}
         </a>
