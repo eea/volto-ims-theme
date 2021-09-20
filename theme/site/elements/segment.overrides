@@ -37,7 +37,8 @@
     }
   }
 
-  #page-document, #content {
+  #page-document,
+  #content {
     padding: 2.25rem 3rem 3rem 2.2rem;
     margin-top: 100px !important;
     background: #fff;
