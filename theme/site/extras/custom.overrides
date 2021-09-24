@@ -6,4 +6,6 @@
   @import 'header';
   @import 'table';
   @import 'utils';
+  @import 'temporal';
+  @import 'geolocation';
 }
