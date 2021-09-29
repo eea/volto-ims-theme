@@ -1,0 +1,9 @@
+@secondaryPointingActiveBorderColor: @darkBlue;
+@secondaryPointingActiveHoverTextColor: @darkBlue;
+@secondaryPointingActiveTextColor: @darkBlue;
+@secondaryPointingActiveFontWeight: bold;
+
+@secondaryVerticalPointingItemMargin: -1px -4px 0 0;
+
+@itemTextColor: @darkBlue;
+
