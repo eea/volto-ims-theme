@@ -6,4 +6,5 @@
 @secondaryVerticalPointingItemMargin: -1px -4px 0 0;
 
 @itemTextColor: @darkBlue;
+@hoverItemTextColor: #000;
 

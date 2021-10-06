@@ -100,13 +100,13 @@ class Footer extends Component {
                     <Table.Body>
                       <Table.Row className="right-row">
                         <Table.Cell className="table-link-description">
-                          <a href="https://prtr.eea.europa.eu/">
-                            European Pollutant Release and Transfer Register
+                          <a href="https://industry.eea.europa.eu/">
+                            European Industrial Emissions Portal
                           </a>
                         </Table.Cell>
                         <Table.Cell className="table-link-title">
                           {' '}
-                          <a href="https://prtr.eea.europa.eu/">E-PRTR</a>
+                          <a href="https://industry.eea.europa.eu/">EIEP</a>
                         </Table.Cell>
                       </Table.Row>
 
