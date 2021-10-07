@@ -27,9 +27,10 @@ const Unauthorized = () => {
 
   useEffect(() => {
     const login_with_return = login + `?return_url=${pathname}`;
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       return history.push(login_with_return);
     }, 5000);
+    return () => clearTimeout(timer);
   }, [history, login, pathname]);
 
   useEffect(() => {
