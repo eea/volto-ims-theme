@@ -55,6 +55,28 @@ const applyConfig = (config) => {
     },
   ];
 
+  // 139558 add major folders found in SITE as external routes
+  config.settings.externalRoutes = [
+    { match: '/news' },
+    { match: '/themes' },
+    { match: '/publications' },
+    { match: '/highlights' },
+    { match: '/data-and-maps' },
+    { match: '/articles' },
+    { match: '/maps' },
+    { match: '/media' },
+    { match: '/help' },
+    { match: '/about-us' },
+    { match: '/legal' },
+    { match: '/signals' },
+    { match: '/soer' },
+    { match: '/code' },
+    { match: '/policy-documents' },
+    { match: '/airs' },
+    { match: '/countries-and-regions' },
+    { match: '/events' },
+  ];
+
   const appExtras = config.settings.appExtras || [];
 
   config.settings.appExtras = [
