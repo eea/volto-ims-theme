@@ -35,14 +35,7 @@ const Logo = () => {
   const url = config.settings.isMultilingual ? `/${lang}` : '/';
 
   return (
-    <Link
-      to={url}
-      title={intl.formatMessage(messages.site)}
-      onClick={(evt) => {
-        evt.preventDefault();
-        window.location = url;
-      }}
-    >
+    <Link to={url} title={intl.formatMessage(messages.site)}>
       <Image
         src={LogoImage}
         alt={intl.formatMessage(messages.eeasite)}

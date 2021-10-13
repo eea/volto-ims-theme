@@ -15,11 +15,6 @@ import EUflag from '../../../../../theme/site/assets/images/europe-flag.svg';
  * @returns {string} Markup of the component
  */
 class Footer extends Component {
-  onLinkClick(evt, url) {
-    evt.preventDefault();
-    window.location = url;
-  }
-
   render() {
     return (
       <Segment className="footer-wrapper">
@@ -249,15 +244,7 @@ class Footer extends Component {
                     </span>
                   </div>
                   <div className="mx-2">
-                    <a
-                      href="https://www.eea.europa.eu/contact-us"
-                      onClick={(evt) =>
-                        this.onLinkClick(
-                          evt,
-                          'https://www.eea.europa.eu/contact-us',
-                        )
-                      }
-                    >
+                    <a href="https://www.eea.europa.eu/contact-us">
                       <Icon name="comment" />
                     </a>
                     <span>
