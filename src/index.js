@@ -55,26 +55,16 @@ const applyConfig = (config) => {
     },
   ];
 
-  // 139558 add major folders found in SITE as external routes
+  // 139558 any path that isn't static ims or controlpanel is treated as external
+  const notInIMS = /^(?!.*(\/ims|\/static|\/controlpanel)).*$/;
   config.settings.externalRoutes = [
-    { match: '/news' },
-    { match: '/themes' },
-    { match: '/publications' },
-    { match: '/highlights' },
-    { match: '/data-and-maps' },
-    { match: '/articles' },
-    { match: '/maps' },
-    { match: '/media' },
-    { match: '/help' },
-    { match: '/about-us' },
-    { match: '/legal' },
-    { match: '/signals' },
-    { match: '/soer' },
-    { match: '/code' },
-    { match: '/policy-documents' },
-    { match: '/airs' },
-    { match: '/countries-and-regions' },
-    { match: '/events' },
+    {
+      match: {
+        path: notInIMS,
+        exact: false,
+        strict: false,
+      },
+    },
   ];
 
   const appExtras = config.settings.appExtras || [];
