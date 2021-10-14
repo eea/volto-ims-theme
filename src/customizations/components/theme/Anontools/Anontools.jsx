@@ -54,7 +54,7 @@ class Anontools extends Component {
             <Link
               onClick={this.props.handleClick}
               aria-label="login"
-              to={`/login${
+              to={`/ims/login${
                 this.props.content
                   ? `?return_url=${this.props.content['@id'].replace(
                       config.settings.apiPath,
