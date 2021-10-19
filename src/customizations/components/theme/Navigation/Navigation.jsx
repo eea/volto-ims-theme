@@ -208,7 +208,6 @@ class Navigation extends Component {
   onLinkClick(evt, url) {
     evt.preventDefault();
     this.closeMobileMenu();
-    window.location = url;
   }
 
   /**
@@ -288,7 +287,6 @@ class Navigation extends Component {
                     ? item.url === `/${lang}`
                     : item.url === ''
                 }
-                onClick={(evt) => this.onLinkClick(evt, item.url || '/')}
               >
                 {item.title}
               </NavLink>
@@ -311,12 +309,7 @@ class Navigation extends Component {
                     <List.Item key={index}>
                       <List.Content>
                         <List.Description>
-                          <a
-                            href={`/${language.code}`}
-                            onClick={(evt) =>
-                              this.onLinkClick(evt, `/${language.code}`)
-                            }
-                          >
+                          <a href={`/${language.code}`}>
                             {`${language.name} (${language.code})`}
                           </a>
                         </List.Description>
@@ -344,12 +337,7 @@ class Navigation extends Component {
                       <List.Item key={index}>
                         <List.Content>
                           <List.Description>
-                            <a
-                              href={`/${language.code}`}
-                              onClick={(evt) =>
-                                this.onLinkClick(evt, `/${language.code}`)
-                              }
-                            >
+                            <a href={`/${language.code}`}>
                               {`${language.name} (${language.code})`}
                             </a>
                           </List.Description>
