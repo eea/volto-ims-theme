@@ -1,0 +1,16 @@
+// override for situation where we use reduced text container sizes
+.headerOverrides() when (@useReducedTextContainer = true) {
+  .contenttype-ims_folder .documentFirstHeading {
+    max-width: 100% !important;
+  }
+
+  .accordion-block h1,
+  .accordion-block h2,
+  .accordion-block h3,
+  .accordion-block h4,
+  .accordion-block h5,
+  .accordion-block h6 {
+    max-width: 100% !important;
+  }
+}
+.headerOverrides();
