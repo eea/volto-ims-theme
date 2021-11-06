@@ -10,6 +10,13 @@ h6 {
   font-weight: 700;
 }
 
+/*******************************
+             Text
+*******************************/
+.content-area p {
+  font-size: @large;
+}
+
 #page-document,
 #content {
   > h1.documentFirstHeading {
@@ -51,10 +58,6 @@ h6 {
 /*-------------------
       FOOTER
 --------------------*/
-
-html {
-  font-size: initial !important;
-}
 
 .first-footer,
 .portal-footer {
@@ -211,6 +214,7 @@ html {
   .colophon-links {
     display: inline-block;
     margin: 0 1em 0.75em;
+    font-size: @11px;
     @media screen and (max-width: 1023px) {
       width: 100%;
       text-align: center;

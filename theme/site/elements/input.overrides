@@ -91,9 +91,8 @@
 }
 
 .custom-search-pop {
-  .ui.mini.input > input {
-    padding: 0 5px;
-    font-size: 16px;
+  .ui.input > input {
+    padding: 5px;
   }
 }
 
@@ -131,7 +130,7 @@
   &.ui.list > .item a,
   &.ui.list .list > .item a {
     cursor: pointer;
-    font-size: 0.7rem;
+    font-size: small;
     line-height: normal;
 
     @media only screen and (max-width: @mobileWidth) {
