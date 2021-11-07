@@ -39,7 +39,6 @@
 
   #page-document,
   #content {
-    padding: 2.25rem 3rem 3rem 2.2rem;
     margin-top: 100px !important;
     background: #fff;
 
@@ -49,8 +48,6 @@
 
     @media only screen and (max-width: 768px) {
       padding-top: 2rem;
-      margin-right: 0 !important;
-      margin-left: 0 !important;
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1400px) {
