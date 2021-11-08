@@ -20,6 +20,7 @@
   }
 }
 
+
 .ui.basic.segment.content-area {
   position: relative;
 
@@ -40,7 +41,6 @@
   #page-document,
   #content {
     margin-top: 100px !important;
-    background: #fff;
 
     @media only screen and (max-width: 1400px) {
       margin-top: 120px !important;
@@ -50,9 +50,6 @@
       padding-top: 2rem;
     }
 
-    @media only screen and (min-width: 768px) and (max-width: 1400px) {
-      padding: 2rem 3rem 3rem 2.2rem !important;
-    }
   }
 
   #page-edit,
