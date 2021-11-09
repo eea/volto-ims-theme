@@ -80,10 +80,17 @@
 }
 
 @media only screen and (max-width: @mobileWidth) {
+  .header-wrapper .menu {
+    top: 80px;
+  }
+
+  .has-toolbar .header-wrapper .menu {
+    top: 160px;
+  }
+
   .header-wrapper .ui.pointing.secondary.stackable.open.menu {
     position: fixed;
     z-index: 100;
-    top: 60px;
     right: 0;
     width: 100%;
     max-width: 400px;

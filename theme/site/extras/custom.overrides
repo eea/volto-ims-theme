@@ -9,3 +9,17 @@
   @import 'temporal';
   @import 'geolocation';
 }
+
+// tweak padding of workflow progress titles now that
+// we have larger font size
+.progress__item .progress__title {
+  padding-top: 0;
+}
+
+// hide staging banner on mobile screens when we have the toolbar
+@media screen and (max-width: 1279px) {
+  .has-toolbar-collapsed .stagingBanner,
+  .has-toolbar .stagingBanner {
+    display: none !important;
+  }
+}
