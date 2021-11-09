@@ -199,6 +199,7 @@ class SearchWidget extends Component {
                   <Input
                     aria-label={this.props.intl.formatMessage(messages.search)}
                     transparent
+                    disabled
                     autoComplete="off"
                     placeholder={this.props.intl.formatMessage(
                       messages.searchSite,

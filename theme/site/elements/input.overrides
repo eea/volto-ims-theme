@@ -93,6 +93,7 @@
 .custom-search-pop {
   .ui.input > input {
     padding: 5px;
+    font-size: 1rem;
   }
 }
 
