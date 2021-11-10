@@ -27,6 +27,7 @@
   .section {
     overflow: hidden;
     max-width: 220px;
+    line-height: 1.3;
     text-overflow: ellipsis;
     white-space: nowrap;
   }

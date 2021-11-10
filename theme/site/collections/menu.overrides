@@ -4,7 +4,7 @@
 
 @media only screen and (min-width: @mobileWidth) {
   .navigation .ui.secondary.pointing.menu a.item {
-    padding: 1.5em 0.75em 1.2em 0.75em !important;
+    padding: 1.5rem 0.75rem 1.2rem 0.75rem !important;
     margin: 0 !important;
     color: @black;
     font-size: 15px;
@@ -62,7 +62,7 @@
   .tools-search-wrapper .search .field.searchbox,
   .tools-search-wrapper .item.sign-in,
   .tools-change-language {
-    padding: 1em 0 1em 0.5em !important;
+    padding: 1rem 0 1rem 0.5rem !important;
   }
 
   .tools-search-wrapper .item.sign-in {
@@ -103,11 +103,11 @@
 
     .navigation-links {
       display: block !important;
-      margin-top: 6em;
+      margin-top: 6rem;
     }
 
     .navigation-links a.item {
-      padding: 1em 0 !important;
+      padding: 1rem 0 !important;
       border-bottom: 1px solid #d3d3d3;
       margin-right: 0 !important;
       color: @white;
@@ -173,17 +173,17 @@
     order: 1;
 
     .field.searchbox {
-      width: 21em;
+      width: 21rem;
       padding: 5px 6px;
       border: 1px solid #bbb;
       background: @white;
     }
 
     .search.large.icon {
-      top: 1em;
-      left: 27em;
+      top: 1rem;
+      left: 27rem;
       color: @white;
-      font-size: 0.8em;
+      font-size: 0.8rem;
     }
 
     .ui.form input[type='text'] {
@@ -212,7 +212,7 @@
 
   .tools-change-language {
     border-bottom: 1px solid #d3d3d3;
-    margin-top: 1em;
+    margin-top: 1rem;
     color: @white;
 
     i,

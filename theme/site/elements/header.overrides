@@ -6,6 +6,7 @@
   .ui.basic.segment.header-wrapper {
     position: sticky !important;
     z-index: 2;
+    top: 20px;
     background: @white;
   }
 

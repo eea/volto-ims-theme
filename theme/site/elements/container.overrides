@@ -2,7 +2,7 @@
         EEA Theme Overrides
 *******************************/
 .ui.container {
-  width: 100% !important;
+  width: auto !important;
   max-width: 1400px !important;
   margin-right: auto !important;
   margin-left: auto !important;

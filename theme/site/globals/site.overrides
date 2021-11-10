@@ -39,8 +39,15 @@ h6 {
 /*******************************
              Text
 *******************************/
-.content-area p {
+.content-area p,
+.content-area li {
   font-size: @large;
+}
+
+// metadata sidebar p tags shouldn't be as large as content area p
+.metadata-sidebar p,
+.metadata-sidebar li {
+  font-size: @medium;
 }
 
 #page-document,
