@@ -1,11 +1,11 @@
 /*-------------------
       HEADER
 --------------------*/
-
-.ui.secondary.segment {
-  background: transparent;
-  color: @lightBlue;
-}
+// #141204 comment for now, to be removed later
+//.ui.secondary.segment {
+//  background: transparent;
+//  color: @lightBlue;
+//}
 
 .ui.vertical.segment {
   z-index: 1;

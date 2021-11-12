@@ -1,1 +1,2 @@
 @useReducedTextContainer: true;
+@textElementsParentSelector: #page-document, #page-edit;
