@@ -1,6 +1,7 @@
 // override for situation where we use reduced text container sizes
 .headerOverrides() when (@useReducedTextContainer = true) {
-  .contenttype-ims_folder .documentFirstHeading {
+  .contenttype-ims_folder .documentFirstHeading,
+  .contenttype-ims_folder #page-document p {
     max-width: 100% !important;
   }
 
