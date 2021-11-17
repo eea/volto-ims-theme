@@ -36,3 +36,15 @@
     display: block !important;
   }
 }
+
+// #141204 decrease width of full-width classes when we have the toolbar
+// opened or closed, we basically need half the width of the toolbar
+@media only screen and (min-width: 768px) {
+  .has-toolbar-collapsed .full-width {
+    width: calc(100vw - 10px) !important;
+  }
+
+  .has-toolbar .full-width {
+    width: calc(100vw - 40px) !important;
+  }
+}

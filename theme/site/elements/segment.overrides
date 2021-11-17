@@ -34,7 +34,7 @@
     background: #00888a;
     content: ' ';
     @media only screen and (max-width: 1400px) {
-      max-height: 290px;
+      max-height: 285px;
     }
   }
 

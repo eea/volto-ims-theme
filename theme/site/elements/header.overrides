@@ -3,16 +3,14 @@
 --------------------*/
 
 @media only screen and (max-width: @mobileWidth) {
-  .ui.basic.segment.header-wrapper {
+  .ui.segment.header-wrapper {
     position: sticky !important;
-    z-index: 2;
-    top: 20px;
+    z-index: 3;
     background: @white;
   }
 
   .ui.segment {
     position: initial !important;
-    top: 0;
   }
 
   .header .logo-nav-wrapper {
@@ -20,11 +18,11 @@
   }
 }
 
-.ui.basic.segment.header-wrapper {
+.ui.segment.header-wrapper {
   padding: 0;
 }
 
-.ui.basic.segment .header {
+.ui.segment .header {
   padding: 0 15px;
 }
 
@@ -64,6 +62,35 @@
 
   .search form {
     padding-top: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+  // #141204 take into account that for the header wrapper on mobile views
+  // we have the volto toolbar on top
+  .has-toolbar-collapsed .header-wrapper {
+    top: 20px;
+  }
+
+  .has-toolbar .header-wrapper {
+    top: 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: @mobileWidth) {
+  // #141204 use fixed position instead of sticky in order to always
+  // have the header on top from 768px to 1279px
+  .ui.segment.header-wrapper {
+    position: fixed !important;
+    top: 0;
+  }
+
+  .has-toolbar .header-wrapper {
+    width: calc(100% - 80px); // toolbar width
+  }
+
+  .has-toolbar-collapsed .header-wrapper {
+    width: calc(100% - 20px);
   }
 }
 

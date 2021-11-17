@@ -79,7 +79,9 @@
   background: @white !important;
 }
 
-@media only screen and (max-width: @mobileWidth) {
+// #141204 tweak position of nav menu on mobile resolutions,
+// larger when we have the toolbar opened
+@media only screen and (max-width: @largestMobileScreen) {
   .header-wrapper .menu {
     top: 80px;
   }
@@ -87,7 +89,17 @@
   .has-toolbar .header-wrapper .menu {
     top: 160px;
   }
+}
 
+// #141204 tweak position of nav menu on mobile resolutions,
+// larger when we have the toolbar sideways
+@media only screen and (min-width: @largestMobileScreen) and (max-width: @mobileWidth) {
+  .header-wrapper .menu {
+    top: 61px;
+  }
+}
+
+@media only screen and (max-width: @mobileWidth) {
   .header-wrapper .ui.pointing.secondary.stackable.open.menu {
     position: fixed;
     z-index: 100;
