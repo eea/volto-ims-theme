@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "@eeacms/volto-corsproxy": "*",
-    "@eeacms/volto-eea-design-system": "eea/volto-eea-design-system#1.0.0"
+    "@eeacms/volto-eea-design-system": "1.0.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",
