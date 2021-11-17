@@ -1,0 +1,41 @@
+// override for situation where we use reduced text container sizes
+.headerOverrides() when (@useReducedTextContainer = true) {
+  .contenttype-ims_folder .documentFirstHeading,
+  .contenttype-ims_folder #page-document p {
+    max-width: 100% !important;
+  }
+
+  .accordion-block h1,
+  .accordion-block h2,
+  .accordion-block h3,
+  .accordion-block h4,
+  .accordion-block h5,
+  .accordion-block h6 {
+    max-width: 100% !important;
+  }
+}
+.headerOverrides();
+
+#page-document {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+// introduce white header for indicator folder
+.contenttype-ims_folder #page-document:before {
+  position: absolute;
+  z-index: -1;
+  top: -25px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  content: ' ';
+}
+@media screen and (min-width: 1024px) {
+  .contenttype-ims_folder #page-document:before {
+    left: -2.5%;
+    width: 105%;
+  }
+}

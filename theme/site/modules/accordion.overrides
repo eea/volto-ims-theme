@@ -11,6 +11,12 @@
   }
 }
 
+// bump margin of accordion-block used in indicators
+#page-document .accordion-block {
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
+}
+
 .ui.styled.accordion .title {
   font-size: 20px;
 }

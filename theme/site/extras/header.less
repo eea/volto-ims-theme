@@ -5,7 +5,7 @@
 
 .environment-theme-bg {
   position: absolute !important;
-  width: 101vw !important;
+  z-index: -1;
   height: 100%;
   max-height: 464px;
   margin-top: -296px;
@@ -21,7 +21,6 @@
 
   @media only screen and (max-width: 768px) {
     max-height: 386px;
-    margin-top: -260px;
   }
 }
 
@@ -34,21 +33,26 @@
   background-color: @headerColor;
   color: @whiteColor;
 
-  .slate-editor-link, a, .citation-item, .footnote-edit-node {
-    color: @linkColor;
-    background: @backgroundColor;
-    font-weight: normal !important;
+  .slate-editor-link,
+  a,
+  .citation-item,
+  .footnote-edit-node {
     border-bottom: 1px solid @linkColor;
+    background: @backgroundColor;
+    color: @linkColor;
+    font-weight: normal !important;
 
     &:visited {
-        color: @linkColor;
+      color: @linkColor;
     }
+
     &::after {
-        color: @linkColor;
+      color: @linkColor;
     }
+
     &:hover {
-        color: @whiteColor;
-        border-bottom: none;
+      border-bottom: none;
+      color: @whiteColor;
     }
   }
 
@@ -99,9 +103,8 @@
 
   @media only screen and (max-width: 768px) {
     left: 51%;
-    width: calc(100vw + 1px);
+    width: 100%;
     padding: 1rem 1.2rem 1rem 1rem;
-    margin: -2.5rem auto !important;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }

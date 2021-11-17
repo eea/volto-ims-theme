@@ -10,6 +10,46 @@ h6 {
   font-weight: 700;
 }
 
+// #141204 added overrides to be deleted after merge to volto core
+.folder-contents {
+  .ui.dropdown:hover > .menu > .item:hover > .menu,
+  .ui.dropdown > .menu > .item:active > .menu {
+    top: 0 !important;
+    left: 100% !important;
+    display: block;
+    overflow: visible;
+    width: auto;
+    height: auto;
+    opacity: 1;
+  }
+
+  .ui.menu.top-menu {
+    flex-wrap: wrap;
+  }
+
+  .table {
+    display: block;
+    overflow: auto;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+}
+/*******************************
+             Text
+*******************************/
+.content-area p,
+.content-area li {
+  font-size: @large;
+}
+
+// metadata sidebar p tags shouldn't be as large as content area p
+.metadata-sidebar p,
+.metadata-sidebar li {
+  font-size: @medium;
+}
+
 #page-document,
 #content {
   > h1.documentFirstHeading {
@@ -51,10 +91,6 @@ h6 {
 /*-------------------
       FOOTER
 --------------------*/
-
-html {
-  font-size: initial !important;
-}
 
 .first-footer,
 .portal-footer {
@@ -211,8 +247,9 @@ html {
   .colophon-links {
     display: inline-block;
     margin: 0 1em 0.75em;
+    font-size: @11px;
     @media screen and (max-width: 1023px) {
-      width: 100%;
+      width: 94%; /* 100% enlarged the content area beyond window area */
       text-align: center;
     }
 
