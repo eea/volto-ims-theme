@@ -144,7 +144,6 @@ class SearchWidget extends Component {
                 placeholder="Search..."
                 action
                 fluid
-                size="mini"
                 value={this.state.text}
                 autoComplete="off"
                 name="q"
@@ -154,7 +153,7 @@ class SearchWidget extends Component {
                   className="search-custom-eea"
                   onClick={this.onGoToSearchPage}
                   icon="search"
-                  size="mini"
+                  size="small"
                 ></Button>
               </Input>
 

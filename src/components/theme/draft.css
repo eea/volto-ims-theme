@@ -1,3 +1,3 @@
-body:not(.wf-state-published) #page-document {
+body:not(.wf-state-published) #aggregate-level-assessment {
   background-image: url('draft.png') !important;
 }

@@ -1,58 +1,50 @@
-@media only screen and (min-width: 1400px) {
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    .ui.container,
-  body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed) .ui.container {
-    width: 1400px !important;
-    margin: 0 auto !important;
-  }
-}
-
-@media only screen and (max-width: 1400px) and (min-width: 768px) {
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    .ui.container,
-  body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed) .ui.container {
-    width: 100% !important;
-    padding: 0 15px !important;
-    margin: 0 auto !important;
-  }
-}
-
-@media only screen and (max-width: 1279px) and (min-width: 1072px) {
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='mobile only']:not(.computer),
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='tablet only']:not(.computer),
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='computer hidden'],
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='large screen only']:not(.computer),
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='widescreen only']:not(.computer),
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='or lower hidden']:not(.tablet):not(.mobile) {
-    display: none !important;
-  }
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1279px) {
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='mobile only']:not([class*='large screen']),
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='tablet only']:not([class*='large screen']),
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='computer only']:not([class*='large screen']),
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='large screen hidden'],
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='widescreen only']:not([class*='large screen']),
-  body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
-    [class*='or lower hidden']:not(.computer):not(.tablet):not(.mobile) {
-    display: block !important;
-  }
+/*******************************
+        EEA Theme Overrides
+*******************************/
+.ui.container {
+  width: auto !important;
+  max-width: 1400px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 @media only screen and (max-width: 768px) {
   .ui.container.pushable {
     transform: unset;
+  }
+}
+
+// EEA overrides to affect display classes from 1000+ to 1279
+@media only screen and (min-width: 1072px) and (max-width: 1279px) {
+  body [class*='mobile only']:not(.computer),
+  body [class*='tablet only']:not(.computer),
+  body [class*='computer hidden'],
+  body [class*='large screen only']:not(.computer),
+  body [class*='widescreen only']:not(.computer),
+  body [class*='or lower hidden']:not(.tablet):not(.mobile) {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1279px) {
+  body [class*='mobile only']:not([class*='large screen']),
+  body [class*='tablet only']:not([class*='large screen']),
+  body [class*='computer only']:not([class*='large screen']),
+  body [class*='large screen hidden'],
+  body [class*='widescreen only']:not([class*='large screen']),
+  body [class*='or lower hidden']:not(.computer):not(.tablet):not(.mobile) {
+    display: block !important;
+  }
+}
+
+// #141204 decrease width of full-width classes when we have the toolbar
+// opened or closed, we basically need half the width of the toolbar
+@media only screen and (min-width: 768px) {
+  .has-toolbar-collapsed .full-width {
+    width: calc(100vw - 10px) !important;
+  }
+
+  .has-toolbar .full-width {
+    width: calc(100vw - 40px) !important;
   }
 }
