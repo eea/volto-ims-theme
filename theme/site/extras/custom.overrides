@@ -16,6 +16,18 @@
   padding-top: 0;
 }
 
+// break words of metadata reference urls otherwise it exists accordion body area
+.csl-entry {
+   word-break: break-all;
+}
+
+// avoid adding text container class from layout with this rule
+.contenttype-ims_indicator .accordion-block {
+   margin-left: auto !important;
+   margin-right: auto !important;
+   max-width: 800px;
+}
+
 // hide staging banner on mobile screens when we have the toolbar
 @media screen and (max-width: 1279px) {
   .has-toolbar-collapsed .stagingBanner,

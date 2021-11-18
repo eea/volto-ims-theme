@@ -83,6 +83,7 @@
   .ui.segment.header-wrapper {
     position: fixed !important;
     top: 0;
+    width: 100%; // when position fixed div behaves as inline
   }
 
   .has-toolbar .header-wrapper {
