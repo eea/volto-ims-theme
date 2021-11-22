@@ -23,7 +23,7 @@
 }
 
 // introduce white header for indicator folder
-.contenttype-ims_folder #page-document:before {
+body:not(.contenttype-ims_indicator) #page-document:before {
   position: absolute;
   z-index: -1;
   top: -25px;
@@ -35,7 +35,7 @@
 }
 @media screen and (min-width: 1024px) {
   .contenttype-ims_folder #page-document:before {
-    left: -2.5%;
-    width: 105%;
+    left: -2.5% !important;
+    width: 105% !important;
   }
 }
