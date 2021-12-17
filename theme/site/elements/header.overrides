@@ -85,6 +85,10 @@
     top: 0;
   }
 
+  .header-wrapper {
+    width: 100%; // when position fixed div behaves as inline
+  }
+
   .has-toolbar .header-wrapper {
     width: calc(100% - 80px); // toolbar width
   }

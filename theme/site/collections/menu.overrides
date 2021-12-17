@@ -95,7 +95,7 @@
 // larger when we have the toolbar sideways
 @media only screen and (min-width: @largestMobileScreen) and (max-width: @mobileWidth) {
   .header-wrapper .menu {
-    top: 61px;
+    top: 60px;
   }
 }
 
@@ -191,11 +191,9 @@
       background: @white;
     }
 
+    // remove search icon on mobile nav menu, search works by phone enter key
     .search.large.icon {
-      top: 1rem;
-      left: 27rem;
-      color: @white;
-      font-size: 0.8rem;
+      display: none;
     }
 
     .ui.form input[type='text'] {
