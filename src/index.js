@@ -5,6 +5,7 @@ import {
   TokenWidget,
   ThemesWidget,
 } from './components';
+import { getImageScale } from '@eeacms/volto-block-data-figure/helpers';
 
 const applyConfig = (config) => {
   // CORS Allowed Destinations
@@ -39,17 +40,26 @@ const applyConfig = (config) => {
           props?.metadata?.taxonomy_themes ||
           props?.properties?.taxonomy_themes;
         const theme = themes?.length ? themes[0]?.token || themes[0] : '';
+        let scale = 'panoramic';
+        if (__CLIENT__) {
+          const window_width = window.innerWidth;
+          const image_scale = getImageScale({ width: window_width });
+          scale = window_width > 1380 ? scale : image_scale;
+        }
         const url = theme
-          ? `https://www.eea.europa.eu/themes/${theme}/theme_image/image_panoramic`
+          ? `https://www.eea.europa.eu/themes/${theme}/theme_image/image_${scale}`
           : '';
         return (
-          <div className="container-environment-theme">
-            <div
-              className="full-width environment-theme-bg"
-              style={{ backgroundImage: `url(${url})` }}
-            ></div>
-            <div className="environment-theme-header">{props.children}</div>
-          </div>
+          (__CLIENT__ && (
+            <div className="container-environment-theme">
+              <div
+                className="full-width environment-theme-bg"
+                style={{ backgroundImage: `url(${url})` }}
+              ></div>
+              <div className="environment-theme-header">{props.children}</div>
+            </div>
+          )) ||
+          null
         );
       },
     },
