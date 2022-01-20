@@ -20,7 +20,6 @@
     "@eeacms/volto-eea-design-system"
   ],
   "dependencies": {
-    "@eeacms/volto-eea-design-system": "*"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",
