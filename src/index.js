@@ -50,16 +50,15 @@ const applyConfig = (config) => {
           ? `https://www.eea.europa.eu/themes/${theme}/theme_image/image_${scale}`
           : '';
         return (
-          (__CLIENT__ && (
-            <div className="container-environment-theme">
+          <div className="container-environment-theme">
+            {__CLIENT__ && (
               <div
                 className="full-width environment-theme-bg"
                 style={{ backgroundImage: `url(${url})` }}
               ></div>
-              <div className="environment-theme-header">{props.children}</div>
-            </div>
-          )) ||
-          null
+            )}
+            <div className="environment-theme-header">{props.children}</div>
+          </div>
         );
       },
     },

@@ -7,12 +7,7 @@ const modify = (config, { target, dev }, webpack) => {
   config.resolve.alias['../../theme.config$'] = themeConfigPath;
   config.resolve.alias['../../theme.config'] = themeConfigPath;
   const projectRootPath = path.resolve('.');
-  const themeLessPath = `${projectRootPath}/node_modules/@eeacms/volto-eea-design-system/theme`;
-  const semanticLessPath = `${projectRootPath}/node_modules/semantic-ui-less`;
-  const hasDesignSystemInstalled = config.resolve.alias['eea-volto-themes'];
-  config.resolve.alias['eea-volto-theme-folder'] = hasDesignSystemInstalled
-    ? themeLessPath
-    : semanticLessPath;
+  config.resolve.alias['volto-ims-theme'] = `${__dirname}/theme`;
 
   return config;
 };
