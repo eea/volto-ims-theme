@@ -17,8 +17,10 @@
     "url": "git@github.com:eea/volto-ims-theme.git"
   },
   "addons": [
+    "@eeacms/volto-corsproxy"
   ],
   "dependencies": {
+    "@eeacms/volto-corsproxy": "*"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.5",
