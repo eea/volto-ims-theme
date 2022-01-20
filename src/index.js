@@ -39,8 +39,9 @@ const applyConfig = (config) => {
           props?.metadata?.taxonomy_themes ||
           props?.properties?.taxonomy_themes;
         const theme = themes?.length ? themes[0]?.token || themes[0] : '';
+        let scale = 'panoramic';
         const url = theme
-          ? `https://www.eea.europa.eu/themes/${theme}/theme_image/image_panoramic`
+          ? `https://www.eea.europa.eu/themes/${theme}/theme_image/image_${scale}`
           : '';
         return (
           <div className="container-environment-theme">
