@@ -65,6 +65,19 @@ class Footer extends Component {
                       </Table.Row>
                       <Table.Row>
                         <Table.Cell className="table-link-title">
+                          <a href="https://climate-energy.eea.europa.eu/">
+                            Climate-Energy
+                          </a>
+                        </Table.Cell>
+                        <Table.Cell className="table-link-description">
+                          {' '}
+                          <a href="https://climate-energy.eea.europa.eu/">
+                            Climate and Energy in the EU
+                          </a>
+                        </Table.Cell>
+                      </Table.Row>
+                      <Table.Row>
+                        <Table.Cell className="table-link-title">
                           {' '}
                           <a href="https://insitu.copernicus.eu/">
                             Copernicus In Situ
