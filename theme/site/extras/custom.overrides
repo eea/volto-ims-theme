@@ -35,3 +35,45 @@
     display: none !important;
   }
 }
+
+
+/* Volto custom CSS */
+.contenttype-ims_indicator .accordion-block {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 800px;
+}
+
+/* avoid extra green background being visible when we have a background image to show below the breadcrumbs */
+.ui.basic.segment.content-area {
+  padding-top: 0;
+  margin-top: 0;
+}
+.ui.basic.segment.content-area::before {
+  max-height: 280px;
+}
+
+.csl-entry {
+  word-break: break-all;
+}
+
+.card__face--back {
+ overflow: initial;
+}
+
+.is-flipped .card__face--back {
+ overflow: auto;
+}
+
+
+@media only screen and (min-width:767px) and (max-width: 1279px) {
+  .header-wrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .tools-search-wrapper .search .search.large.icon {
+    display: none;
+  }
+}
