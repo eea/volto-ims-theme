@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react';
 import { Segment, Header, Table, Icon, Image } from 'semantic-ui-react';
-
+import { Link } from 'react-router-dom';
 import EUflag from '@eeacms/volto-ims-theme/../theme/eea/assets/images/europe-flag.svg';
 
 /**
@@ -353,12 +353,9 @@ class Footer extends Component {
                 </p>
 
                 <p className="colophon-links">
-                  <a
-                    href="https://www.eea.europa.eu/login_form"
-                    title="Log in to CMS"
-                  >
+                  <Link to="/ims/login" title="Log in to CMS">
                     <strong>CMS login</strong>
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
