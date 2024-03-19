@@ -1479,9 +1479,8 @@ class Contents extends Component {
                                       {this.props.intl.formatMessage({
                                         id: this.state.index.values[index]
                                           .label,
-                                        defaultMessage: this.state.index.values[
-                                          index
-                                        ].label,
+                                        defaultMessage:
+                                          this.state.index.values[index].label,
                                       })}
                                     </span>
                                   </Dropdown.Item>
